@@ -1,4 +1,4 @@
-public class metodos.java{ 
+public class metodos{ 
   
   // método é uma função que programamos para uma classe
  // o método so vai ser executado quando ele for chamado
