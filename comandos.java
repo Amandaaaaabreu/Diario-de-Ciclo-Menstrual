@@ -20,7 +20,7 @@ public class comandos{
         }
     }
  }
-/*Operadores logicos: >, <, >=, <=, !=, ! */
+//Operadores logicos: >, <, >=, <=, !=, ! */
 
 /* Operação ternaria seria:
  * String res;
