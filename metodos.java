@@ -4,7 +4,10 @@ public class metodos.java{
  // o método so vai ser executado quando ele for chamado
 
             public static void main (Strings[] args) {
-              teste();
+                  for(int i=0;i<5;i++){ 
+                  teste();
+            }
+              
             }
             public static void teste(){
                     System.out.println(" Isso é um teste!");
