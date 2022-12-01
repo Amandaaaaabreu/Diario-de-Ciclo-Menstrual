@@ -1,6 +1,6 @@
 public class metodo2{
   
-  public static void main(Strings[] args){
+  public static void main(String[] args){
       msg("Testando 1");
       msg("Testando 2");
       msg("Testando 3");
