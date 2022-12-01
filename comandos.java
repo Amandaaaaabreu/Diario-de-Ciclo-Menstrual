@@ -1,4 +1,4 @@
-package Java;
+
 public class comandos{
 
     public static void main(String[] args){
