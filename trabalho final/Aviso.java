@@ -18,6 +18,4 @@ public void setLembrete(String lembrete){
     this.lembrete = lembrete;
 }
 
-
-
 }

@@ -45,22 +45,5 @@ public void setProbabilid_engravidar( int probabilid_engravidar){
 }
 
 
-// metodos 
-public void estim_dias_restantes(){
-
-}
-
-public void duracao_ciclo(){
-    
-}
-
-public void entregar_probabilid(){
-    
-}
-
-
-
-
-
 
 }

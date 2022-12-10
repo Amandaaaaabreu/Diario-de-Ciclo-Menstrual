@@ -63,24 +63,6 @@ public void setToma_anticoncepcional(){
     
 }
 
-// metodos implementados
-public void realizar_cadastro(){
-
-}
-
-public void alterar_cadastro(){
-    
-}
-
-public void excluir_conta(){
-    
-}
-
-public void enviar_opniao(){
-    
-}
-
-
 
 }
 

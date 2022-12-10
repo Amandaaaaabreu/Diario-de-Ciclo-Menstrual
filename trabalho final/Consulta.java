@@ -47,15 +47,6 @@ public void setDoencas(String doencas){
     this.doencas = doencas;
 }
 
-// metodos implementados
-public void obter_prontuario(){
-    
-}
-
-
-
-
-
 
 
 }

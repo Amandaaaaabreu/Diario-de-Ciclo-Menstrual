@@ -58,9 +58,4 @@ public void setOutros(char outros){
 }
 
 
-// metodos
-public void retornar_resultado(){
-
-}
-
 }

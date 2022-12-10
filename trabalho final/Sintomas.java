@@ -58,7 +58,7 @@ public Boolean getNada_incomoda(){
 public void setNada_incomoda(Boolean nada_incomoda){
     this.nada_incomoda = nada_incomoda;
 }
-
+}
 
 
 
