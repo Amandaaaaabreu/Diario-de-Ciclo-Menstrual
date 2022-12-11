@@ -1,10 +1,4 @@
-import Fluxo_Menstrual;
-import Ciclo;
-import Aviso;
-import Sintomas;
-import Consulta;
-import Suporte;
-
+import java.util.Scanner;
 
 public class Main {
     static Usuaria u1;
@@ -18,7 +12,7 @@ public class Main {
 public static void main(String[] args){
         menu();
     }
-    public void menu(){
+  public static void menu(){
             Scanner scan = new Scanner (System.in);
             int escolha = 0; 
             System.out.println("Diário de ciclos menstruais - Menu:\n");
@@ -31,27 +25,27 @@ public static void main(String[] args){
             System.out.println("Sair:" + "Digite 7" + "\n");
             escolha = scan.nextInt();
                 if(escolha == 1){
-                    this.fm = Fluxo_Menstrual.Criar_Fluxo_Menstrual();
+                    fm.Criar_Fluxo_Menstrual();
                     menu();
                 }
                 else if(escolha == 2){
-                    System.out.println("Dias Restantes: " + Ciclo.estim_dias_restantes());
+                    System.out.println("Dias Restantes: " + cl.estim_dias_restantes());
                     menu();
                 }
                 else if(escolha == 3){
-                    Aviso.tomar_anticoncepcional();
+                    av.tomar_anticoncepcional();
                     menu();
                 }
                 else if(escolha == 4){
-                    this.st = Sintomas.retornar_sintomas();
+                    st.retornar_sintomas();
                     menu();
                 }
                 else if(escolha == 5){
-                    System.out.println(Consulta.obter_prontuario());
+                    System.out.println(ct.obter_prontuario());
                     menu();
                 }
                 else if(escolha == 6){
-                    if(Suporte.obter_prontuario()){
+                    if(sp.confirmar_consulta()){
                         System.out.println("Consulta Marcada");
                     }
                     else{
@@ -67,4 +61,5 @@ public static void main(String[] args){
                     menu();
                 }
     }
+}
 }
