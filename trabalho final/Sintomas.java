@@ -98,24 +98,3 @@ public Sintomas retornar_sintomas(){
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
