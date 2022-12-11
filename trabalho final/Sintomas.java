@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //nome da classe
 public class Sintomas {
 
@@ -10,7 +12,7 @@ public class Sintomas {
 
 
     // construtores
-public Sintomas(char colicas_menstruais, char sintomas_TPM, char mudancas_humor, String outros, Boolean nada_incomoda){
+public Sintomas(char colicas_menstruais, char sintomas_TPM, char mudancas_humor, Boolean nada_incomoda, String outros){
     this.colicas_menstruais = colicas_menstruais;
     this.sintomas_TPM = sintomas_TPM;
     this.mudancas_humor = mudancas_humor;
@@ -58,6 +60,42 @@ public Boolean getNada_incomoda(){
 public void setNada_incomoda(Boolean nada_incomoda){
     this.nada_incomoda = nada_incomoda;
 }
+
+public Sintomas retornar_sintomas(){
+
+    Scanner scan = new Scanner (System.in);
+    int resultado = 0;
+
+    System.out.println("Informe seus sintomas:\n");
+
+    System.out.println("Cólicas Menstruais:\n" + "B - Baixa\n"+"M - Média\n"+"I - Intensa\n");
+    colicas_menstruais = scan.next().charAt(0); // para a pessoa responder
+    System.out.println("Sintomas da TPM:\n"+"B - Baixo\n"+"M -Médio\n"+"I -Intenso\n");
+    sintomas_TPM = scan.next().charAt(0);
+    System.out.println("Mudanças de Humor:\n"+"B - Baixa\n"+"M -Média\n"+"I -Intensa\n");
+    mudancas_humor = scan.next().charAt(0);
+    System.out.println("Nada incomoda?\n Sim -Digite 0\n Não - Digite 1\n");
+    resultado = scan.nextInt();
+    if(resultado==0){
+        nada_incomoda = true;
+    }
+    else if(resultado==1){
+        nada_incomoda = false;
+    }
+    else{
+        System.out.println("Valor Inválido");
+    }
+
+    System.out.println("Outros:\n");
+    outros = scan.nextLine();
+
+    Sintomas retornar_sintomas = new Sintomas(colicas_menstruais, sintomas_TPM, mudancas_humor, nada_incomoda, outros);
+    
+    return retornar_sintomas;
+
+
+}
+
 }
 
 
@@ -80,4 +118,4 @@ public void setNada_incomoda(Boolean nada_incomoda){
 
 
 
-}
+

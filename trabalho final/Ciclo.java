@@ -1,49 +1,64 @@
 // importando biblioteca
-import java.sql.Date;
+// import java.sql.Date;
+import java.util.Scanner;
 
 //nome da classe                                     
 public class Ciclo {
 
-    private Date inicio_ciclo;
-    private Date fim_ciclo;
-    private  int probabilid_engravidar;
-
+    private int inicio_ciclo;
+    private int fim_ciclo;
+    
 
 // definindo os construtores
-public Ciclo( Date inicio_ciclo, Date fim_ciclo, int probabilid_engravidar ){ 
+public Ciclo( int inicio_ciclo, int fim_ciclo) { 
     this.inicio_ciclo =  inicio_ciclo;
     this.fim_ciclo = fim_ciclo;
-    this.probabilid_engravidar = probabilid_engravidar;
+
    
  } 
 
 
  // implementrando gets e sets / metodos
-public Date geInicio_ciclo(){
+public int geInicio_ciclo(){
     return inicio_ciclo ;
 }
-public void setInicio_ciclo( Date inicio_ciclo){
+public void setInicio_ciclo( int inicio_ciclo){
     this.inicio_ciclo = inicio_ciclo;
 }
 
 
 
-public Date getFim_ciclo(){
+public int getFim_ciclo(){
     return fim_ciclo;
 }
-public void setFim_CicloDate( Date fim_ciclo){
+public void setFim_CicloDate( int fim_ciclo){
     this.fim_ciclo = fim_ciclo;
 }
 
 
+// metodos
+public int estim_dias_restantes(){
 
-public int getProbabilid_engravidar(){
-    return probabilid_engravidar;
+    Scanner scan = new Scanner (System.in);
+    int hoje;
+    int resultado = 0;
+
+    System.out.println("Responda as informações do seu ciclo:\n");
+
+    System.out.println("Quantos dias dura sua menstruação:\n");
+    resultado = scan.nextInt(); // para a pessoa responder
+    System.out.println("Dia do início do seu ciclo:\n");
+    inicio_ciclo = scan.nextInt();
+    System.out.println("Que dia é hoje?\n");
+    hoje = scan.nextInt();
+
+    
+    int resposta = inicio_ciclo + resultado;
+    int dias_restantes = resposta - hoje;
+
+    return dias_restantes;
+    
 }
-public void setProbabilid_engravidar( int probabilid_engravidar){
-    this.probabilid_engravidar =  probabilid_engravidar;
-}
-
-
+  
 
 }

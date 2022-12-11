@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //nome da classe
 public class Fluxo_Menstrual {
     
@@ -6,10 +8,10 @@ public class Fluxo_Menstrual {
     private char sono;
     private char humor;
     private char secrecao;
-    private char outros;
+    private String outros;
 
 // definindo os construtores
-public Fluxo_Menstrual(char nivel, char sono, char humor, char secrecao, char outros ){ 
+public Fluxo_Menstrual(char nivel, char sono, char humor, char secrecao, String outros ){ 
     this.nivel =  nivel;
     this.sono = sono;
     this.humor = humor;
@@ -50,12 +52,38 @@ public void setSecrecao(char secrecao){
 }
 
 
-public char getOutros(){
+public String getOutros(){
     return outros;
 }
-public void setOutros(char outros){
+public void setOutros(String outros){
     this.outros = outros;
 }
 
+public Fluxo_Menstrual Criar_Fluxo_Menstrual(){
 
+    Scanner scan = new Scanner (System.in);
+
+
+    System.out.println("Informe seus dados:\n");
+
+    System.out.println("Humor:\n" + "T - Triste\n"+"F - Feliz\n"+"C - Cansada\n");
+    humor = scan.next().charAt(0); // para a pessoa responder
+    System.out.println("Nível:\n"+"B - Baixo\n"+"M -Médio\n"+"I -Intenso\n");
+    nivel = scan.next().charAt(0);
+    System.out.println("Sono:\n"+"B - Baixo\n"+"M -Médio\n"+"I -Intenso\n");
+    sono = scan.next().charAt(0);
+    System.out.println("Secreção:\n"+"B - Baixo\n"+"M -Médio\n"+"I -Intenso\n");
+    secrecao = scan.next().charAt(0);
+    System.out.println("Outros:\n");
+    outros = scan.nextLine();
+
+    Fluxo_Menstrual fluxo_menstrual = new Fluxo_Menstrual(humor,nivel,sono,secrecao,outros);
+    
+    return fluxo_menstrual;
+
+
+
+    
+    
+}
 }
