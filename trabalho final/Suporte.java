@@ -1,64 +1,54 @@
+// import java.util.Date;
 import java.util.Scanner;
 
-public class Main {
-    static Usuaria u1;
-    static Fluxo_Menstrual fm;
-    static Ciclo cl;
-    static Suporte sp;
-    static Consulta ct;
-    static Aviso av;
-    static Sintomas st;
+//nome da classe
+public class Suporte extends Usuaria { 
+    
+    // atributos 
+    private Boolean consulta;
 
-public static void main(String[] args){
-        menu();
+   // definindo os construtores
+public Suporte ( String nome, int cpf, Double peso, String nascimento, Boolean anticoncepcional,Boolean consulta){
+    super(nome, cpf, peso, nascimento, anticoncepcional);
+    this.consulta = consulta;
+}
+
+public String toString(){
+    return " Confirmação da consulta: ";
+}
+
+
+   // definindo gets e sets / metodos
+public Boolean getConsulta(){
+    return consulta;
+}
+public void setConsulta(Boolean consulta){
+    this.consulta =  consulta;
+}
+
+// meotodo
+public Boolean confirmar_consulta(){
+    // String saida = " -------- Confirmar consulta? -------- "; 
+    Boolean resposta = false; 
+    int resultado;
+    System.out.println("Confirmar Consulta?\n Sim - Digite 0\n Não - Digite 1");
+    Scanner scan = new Scanner (System.in);
+    resultado = scan.nextInt();
+    if(resultado==0){
+        resposta = true;
     }
-    public static void menu(){
-            Scanner scan = new Scanner (System.in);
-            int escolha = 0; 
-            System.out.println("Diário de ciclos menstruais - Menu:\n");
-            System.out.println("Criar Fluxo Menstrual:" + "Digite 1"+ "\n");
-            System.out.println("Verificar estimativa de dias restantes:" + "Digite 2"+ "\n");
-            System.out.println("Ligar lembrete de avisos:" + "Digite 3"+ "\n");
-            System.out.println("Verificar Sintomas:" + "Digite 4"+ "\n");
-            System.out.println("Obter Prontuário:" + "Digite 5"+ "\n");
-            System.out.println("Marcar Consulta:" + "Digite 6"+ "\n");
-            System.out.println("Sair:" + "Digite 7" + "\n");
-            escolha = scan.nextInt();
-                if(escolha == 1){
-                    fm.Criar_Fluxo_Menstrual();
-                    menu();
-                }
-                else if(escolha == 2){
-                    System.out.println("Dias Restantes: " + cl.estim_dias_restantes());
-                    menu();
-                }
-                else if(escolha == 3){
-                    av.tomar_anticoncepcional();
-                    menu();
-                }
-                else if(escolha == 4){
-                    st.retornar_sintomas();
-                    menu();
-                }
-                else if(escolha == 5){
-                    System.out.println(ct.obter_prontuario());
-                    menu();
-                }
-                else if(escolha == 6){
-                    if(sp.confirmar_consulta()){
-                        System.out.println("Consulta Marcada");
-                    }
-                    else{
-                        System.out.println("Consulta Cancelada");
-                    }
-                    menu();
-                }
-                else if(escolha == 7){
-                    System.out.println("Saindo do Programa...");
-                }
-                else{
-                    System.out.println("Valor Inválido\n");
-                    menu();
-                }
+    
+    else if(resultado==1){
+        resposta = false;
+    }
+
+    else{
+        System.out.println("Valor inválido");
+    }
+
+    return resposta;
+    
+    
+
     }
 }
