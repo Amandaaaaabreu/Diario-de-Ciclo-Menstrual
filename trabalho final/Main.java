@@ -59,6 +59,9 @@ public static void main(String[] args){
                     }
                     menu();
                 }
+                else if(escolha == 7){
+                    System.out.println("Saindo do Programa...");
+                }
                 else{
                     System.out.println("Valor Inválido\n");
                     menu();
