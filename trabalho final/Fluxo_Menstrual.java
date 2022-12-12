@@ -1,3 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package main;
+
 import java.util.Scanner;
 
 //nome da classe
@@ -59,7 +66,7 @@ public void setOutros(String outros){
     this.outros = outros;
 }
 
-public Fluxo_Menstrual Criar_Fluxo_Menstrual(){
+public static Fluxo_Menstrual Criar_Fluxo_Menstrual(){
 
     Scanner scan = new Scanner (System.in);
 
@@ -67,15 +74,15 @@ public Fluxo_Menstrual Criar_Fluxo_Menstrual(){
     System.out.println("Informe seus dados:\n");
 
     System.out.println("Humor:\n" + "T - Triste\n"+"F - Feliz\n"+"C - Cansada\n");
-    humor = scan.next().charAt(0); // para a pessoa responder
+    char humor = scan.next().charAt(0); // para a pessoa responder
     System.out.println("Nível:\n"+"B - Baixo\n"+"M -Médio\n"+"I -Intenso\n");
-    nivel = scan.next().charAt(0);
+    char nivel = scan.next().charAt(0);
     System.out.println("Sono:\n"+"B - Baixo\n"+"M -Médio\n"+"I -Intenso\n");
-    sono = scan.next().charAt(0);
+    char sono = scan.next().charAt(0);
     System.out.println("Secreção:\n"+"B - Baixo\n"+"M -Médio\n"+"I -Intenso\n");
-    secrecao = scan.next().charAt(0);
+    char secrecao = scan.next().charAt(0);
     System.out.println("Outros:\n");
-    outros = scan.nextLine();
+    String outros = scan.nextLine();
 
     Fluxo_Menstrual fluxo_menstrual = new Fluxo_Menstrual(humor,nivel,sono,secrecao,outros);
     
