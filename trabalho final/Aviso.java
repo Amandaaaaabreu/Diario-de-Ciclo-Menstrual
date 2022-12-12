@@ -1,3 +1,5 @@
+package main;
+
 import java.util.Scanner;
 
 // nome da classe
@@ -21,7 +23,7 @@ public void setLembrete(String lembrete){
 }
 
 // metodos
-public void tomar_anticoncepcional(){
+public static void tomar_anticoncepcional(){
     
     Scanner scan = new Scanner (System.in);
     
@@ -34,7 +36,7 @@ public void tomar_anticoncepcional(){
 
     if(tomar_anticoncepcional==0){
         armazenar = true;
-        System.out.println("Deseja receber um lembrete? Sim - Digite 0\n Não - Digite 1\n");
+        System.out.println("Deseja receber um lembrete?\n Sim - Digite 0\n Não - Digite 1\n");
         int receber_lembrete = scan.nextInt(); // perguntar se as variaveis estao recebendo valores
     }
     
