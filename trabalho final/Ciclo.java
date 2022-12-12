@@ -1,3 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package main;
 // importando biblioteca
 // import java.sql.Date;
 import java.util.Scanner;
@@ -37,7 +43,7 @@ public void setFim_CicloDate( int fim_ciclo){
 
 
 // metodos
-public int estim_dias_restantes(){
+public static int estim_dias_restantes(){
 
     Scanner scan = new Scanner (System.in);
     int hoje;
@@ -48,7 +54,7 @@ public int estim_dias_restantes(){
     System.out.println("Quantos dias dura sua menstruação:\n");
     resultado = scan.nextInt(); // para a pessoa responder
     System.out.println("Dia do início do seu ciclo:\n");
-    inicio_ciclo = scan.nextInt();
+    int inicio_ciclo = scan.nextInt();
     System.out.println("Que dia é hoje?\n");
     hoje = scan.nextInt();
 
