@@ -1,3 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package main;
+
 // pacote para usar o Date
 // import java.sql.Date;
 // import java.text.SimpleDateFormat;
@@ -70,11 +77,8 @@ public void setToma_anticoncepcional(){
 public Usuaria realizar_cadastro(){
     
     Scanner scan = new Scanner (System.in); 
-
     int toma=0;
-
     System.out.println("Informe seus dados:\n");
-
     System.out.println("Nome:\n");
     nome = scan.nextLine(); // para a pessoa responder
     System.out.println("CPF:\n");
@@ -93,11 +97,9 @@ public Usuaria realizar_cadastro(){
     else if(toma==1){
         toma_anticoncepcional = false;
     }
-
     else{
         System.out.println("Valor inválido");
     }
-
     Usuaria usuaria = new Usuaria(nome,cpf,peso,data_nascimento,toma_anticoncepcional);
     
     return usuaria;
@@ -108,4 +110,3 @@ public Usuaria realizar_cadastro(){
 
 
 }
-
