@@ -1,3 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package main;
+
 import java.util.Scanner;
 
 // nome da classe
@@ -49,20 +56,20 @@ public void setDoencas(String doencas){
     this.doencas = doencas;
 }
 
-public String obter_prontuario(){
+public static String obter_prontuario(){
 
     String prontuario;
 
     Scanner scan = new Scanner (System.in);
 
     System.out.println("Peso:\n");
-    peso = scan.nextDouble();
+    double peso = scan.nextDouble();
     System.out.println("Fluxo Vaginal:");
-    fluxo_vaginal = scan.nextLine();
+    String fluxo_vaginal = scan.next();
     System.out.println("Medicamento Receitado:");
-    medicam_receitado = scan.nextLine();
+    String medicam_receitado = scan.next();
     System.out.println("Doenças:");
-    doencas = scan.nextLine();
+    String doencas = scan.next();
 
     
     prontuario = "--- Prontuário ---" + "\n" + "Peso: " + peso + "\n" + "Fluxo Vaginal: " + fluxo_vaginal + "\n" + "Medicamento Receitado: " + medicam_receitado + "\n" + "Doenças: " + doencas + "\n";
