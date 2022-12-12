@@ -1,3 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package main;
+
 import java.util.Scanner;
 
 //nome da classe
@@ -61,19 +68,20 @@ public void setNada_incomoda(Boolean nada_incomoda){
     this.nada_incomoda = nada_incomoda;
 }
 
-public Sintomas retornar_sintomas(){
+public static Sintomas retornar_sintomas(){
 
     Scanner scan = new Scanner (System.in);
     int resultado = 0;
+    boolean nada_incomoda=false;
 
     System.out.println("Informe seus sintomas:\n");
 
     System.out.println("Cólicas Menstruais:\n" + "B - Baixa\n"+"M - Média\n"+"I - Intensa\n");
-    colicas_menstruais = scan.next().charAt(0); // para a pessoa responder
+    char colicas_menstruais = scan.next().charAt(0); // para a pessoa responder
     System.out.println("Sintomas da TPM:\n"+"B - Baixo\n"+"M -Médio\n"+"I -Intenso\n");
-    sintomas_TPM = scan.next().charAt(0);
+    char sintomas_TPM = scan.next().charAt(0);
     System.out.println("Mudanças de Humor:\n"+"B - Baixa\n"+"M -Média\n"+"I -Intensa\n");
-    mudancas_humor = scan.next().charAt(0);
+    char mudancas_humor = scan.next().charAt(0);
     System.out.println("Nada incomoda?\n Sim -Digite 0\n Não - Digite 1\n");
     resultado = scan.nextInt();
     if(resultado==0){
@@ -87,7 +95,7 @@ public Sintomas retornar_sintomas(){
     }
 
     System.out.println("Outros:\n");
-    outros = scan.nextLine();
+    String outros = scan.nextLine();
 
     Sintomas retornar_sintomas = new Sintomas(colicas_menstruais, sintomas_TPM, mudancas_humor, nada_incomoda, outros);
     
@@ -97,4 +105,3 @@ public Sintomas retornar_sintomas(){
 }
 
 }
-
