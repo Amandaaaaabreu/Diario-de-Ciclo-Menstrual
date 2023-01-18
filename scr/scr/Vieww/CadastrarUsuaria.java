@@ -1,4 +1,4 @@
-package Vieww;
+package scr.Vieww;
 
 import javax.swing.Action;
 import javax.swing.JButton;
