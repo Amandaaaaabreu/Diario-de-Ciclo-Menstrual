@@ -1,22 +1,25 @@
-package scr.Vieww;
+package src.Vieww;
 
 import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+
+import java.awt.event.*;
+
+    public class TelaMenu implements ActionListener {
+      private static JFrame janela;
+      private static JButton usuaria;
+      private static JButton ciclo;
+      private static JButton atendimento;
+      private static JButton tpm;
 
 
 
-
-public class TelaMenu implements ActionListener {
-    JLabel nomeLabel, cpfLabel, pesoLabel, data_nascimentoLabel, toma_anticoncepcionalLabel, lembreteLabel;
-
-
-   TelaMenu(){
+   public TelaMenu(){
         // estilo do frame
-        JFrame janela = new JFrame("Diário de Ciclo Menstrual");
+        
         janela.setLayout(null);  // editar as medidas a mão
         janela.setSize(600, 500);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // fechar a jabela no x */
@@ -46,10 +49,18 @@ public class TelaMenu implements ActionListener {
         // Monstrando o frame construido
         janela.setVisible(true);
 
-
     }
-      
 
+    public static void main (String args[]){
+        TelaMenu testando = new TelaMenu();
+        usuaria.addActionListener(testando);
+    }
+
+    public void actionPerformed(ActionEvent e){
+        System.out.println("Realizar Cadastro");
+    }
+
+   
 }
 
 
