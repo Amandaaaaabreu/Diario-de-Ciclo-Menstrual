@@ -1,6 +1,6 @@
 package Modelo;
 
-public class Tpm {
+public class TesteTpm {
     // atributos
     private char sono;
     private char humor;
@@ -10,7 +10,7 @@ public class Tpm {
     private char insonia;
 
     // construtores
-public Tpm(char sono, char humor, char secrecao, char calma, char estressada, char insonia){
+public TesteTpm(char sono, char humor, char secrecao, char calma, char estressada, char insonia){
     this.sono = sono;
     this.humor = humor;
     this. secrecao = secrecao;

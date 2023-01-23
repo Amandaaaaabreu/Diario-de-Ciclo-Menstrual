@@ -1,26 +1,26 @@
 package Modelo;
 
-import java.sql.Date;
+
 
 public class Usuaria {
     //atributos
     private String nome;
-    private int cpf;
-    private int peso;
-    private Date data_nascimento;
-    private Boolean toma_anticoncepcional;
-    private Boolean lembrete;
+    private String cpf;
+    private String peso;
+    private String data_nascimento;
+    private String toma_anticoncepcional;
+   
 
     //construtores
-public Usuaria(String nome, int cpf, int peso, Date data_nascimento, Boolean toma_anticoncepcional, Boolean lembrete){
+public Usuaria(String nome, String cpf, String peso, String data_nascimento,String toma_anticoncepcional ){
         this.nome = nome;
         this.cpf = cpf;
         this.peso = peso;
         this.data_nascimento = data_nascimento;
         this.toma_anticoncepcional = toma_anticoncepcional;
-        this.lembrete = lembrete;
+       
     }
-public Usuaria(String text, String text2, String text3, String text4) {
+public Usuaria() {
 }
 // gets e sets
 public String getNome(){
@@ -29,56 +29,38 @@ public String getNome(){
 public void setNome(String nome){
     this.nome = nome;
 }
-public int getCpf(){
+public String getCpf(){
     return cpf;
 }
-public void setCpf(int cpf){
+public void setCpf(String cpf){
     this.cpf = cpf;
 }
-public int getPeso(){
+public String getPeso(){
     return peso;
 }
-public void setPeso(int peso){
+public void setPeso(String peso){
     this.peso = peso;
 }
-public Date getData_Nascimento(){
+public String getData_Nascimento(){
     return data_nascimento;
 }
-public void setData_Nascimento(Date data_nascimento){
+public void setData_Nascimento(String data_nascimento){
     this.data_nascimento = data_nascimento;
 }
-public Boolean getToma_Anticoncepcional(){
+public String getToma_Anticoncepcional(){
     return toma_anticoncepcional;
 }
-public void setToma_anticoncepcional(Boolean toma_anticoncepcional){
+public void setToma_anticoncepcional(String toma_anticoncepcional){
     this.toma_anticoncepcional = toma_anticoncepcional;
 }
-public Boolean getLembrete(){
-    return lembrete;
-}
-public void setLembrete(Boolean lembrete){
-    this.lembrete = lembrete;
-}
+
+public void editarDadosUsuaria(String nome, String cpf, String peso, String data_nascimento,String toma_anticoncepcional){
+    this.setNome(nome);
+    this.setCpf(cpf);
+    this.setPeso(peso);
+    this.setData_Nascimento(data_nascimento);
+    this.setToma_anticoncepcional(toma_anticoncepcional);
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 }
