@@ -1,24 +1,32 @@
 package Modelo;
 
 // atributos
-public class Ciclo {
+public class Ciclo extends Usuaria {
 
     private String inicio_menstruacao;
     private String fim_menstruacao;
-    private int duracao_ciclo;
+    private String duracao_ciclo;
     private String numero;
+    private Sintomas sintomas;
+    private Atendimento atendimento;
 
     // gets e sets
 
-    public Ciclo(String dataInicio, String dataFinal, int duracao, String numero) {
-
-        this.inicio_menstruacao = dataInicio;
-        this.fim_menstruacao = dataFinal;
-        this.duracao_ciclo = duracao;
+    public Ciclo (String nome, String cpf, String data_nascimento, String toma_anticoncepcional, String  inicio_menstruacao , String fim_menstruacao, String duracao_ciclo, String numero ) {
+        super(nome, cpf, data_nascimento, toma_anticoncepcional);
+        this.inicio_menstruacao = inicio_menstruacao;
+        this.fim_menstruacao = fim_menstruacao;
+        this.duracao_ciclo = duracao_ciclo;
         this.numero = numero;
+        this.sintomas = null;
+        this.atendimento = null;
     }
 
-    public Ciclo(){}
+    
+
+    public String toString(){
+        return this.getNome();
+    }
 
     public String getInicio_Menstruacao() {
         return inicio_menstruacao;
@@ -36,11 +44,11 @@ public class Ciclo {
         this.fim_menstruacao = fim;
     }
 
-    public int getDuracao_Ciclo() {
+    public String getDuracao_Ciclo() {
         return duracao_ciclo;
     }
 
-    public void setDuracao_Ciclo(int duracao) {
+    public void setDuracao_Ciclo(String duracao) {
         this.duracao_ciclo = duracao;
     }
 
@@ -51,5 +59,23 @@ public class Ciclo {
     public void setNumero(String numero) {
         this.numero = numero;
     }
+
+    public Sintomas getSintomas() {
+        return sintomas;
+    }
+
+    public void setSintomas(Sintomas sintomas) {
+        this.sintomas = sintomas;
+    }
+
+    public Atendimento getAtendimento() {
+        return atendimento;
+    }
+
+    public void setAtendimento(Atendimento atendimento) {
+        this.atendimento = atendimento;
+    }
+
+    
 
 }

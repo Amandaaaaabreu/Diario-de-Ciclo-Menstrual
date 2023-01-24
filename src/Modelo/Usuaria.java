@@ -1,8 +1,82 @@
 package Modelo;
 
+public abstract class Usuaria {
+
+    private String nome;
+    private String cpf;
+    private String data_nascimento;
+    private String toma_anticoncepcional;
+
+    
+    public Usuaria (String nome, String cpf, String data_nascimento, String toma_anticoncepcional) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.data_nascimento = data_nascimento;
+        this.toma_anticoncepcional = toma_anticoncepcional;
+    }
+    
+    public String getNome(){
+        return nome;
+    }
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public String getCpf(){
+        return cpf;
+    }
+    public void setCpf(String cpf){
+        this.cpf = cpf;
+    }
+
+    public String getData_Nascimento(){
+        return data_nascimento;
+    }
+    public void setData_Nascimento(String data_nascimento){
+        this.data_nascimento = data_nascimento;
+    }
+
+    public String getToma_Anticoncepcional(){
+        return toma_anticoncepcional;
+    }
+    public void setToma_anticoncepcional(String toma_anticoncepcional){
+        this.toma_anticoncepcional = toma_anticoncepcional;
+    }
+    
+
+}
 
 
-public class Usuaria {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*public class Usuaria {
     //atributos
     private String nome;
     private String cpf;
@@ -23,9 +97,15 @@ public Usuaria(String nome, String cpf, String peso, String data_nascimento,Stri
 public Usuaria() {
 }
 // gets e sets
+
+public String toString() {
+    return this.getNome();
+}
+
 public String getNome(){
     return nome;
 }
+
 public void setNome(String nome){
     this.nome = nome;
 }
@@ -63,4 +143,4 @@ public void editarDadosUsuaria(String nome, String cpf, String peso, String data
     
 }
 
-}
+} */

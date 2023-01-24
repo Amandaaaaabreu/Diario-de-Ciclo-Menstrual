@@ -12,6 +12,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import Modelo.Atendimento;
+import Modelo.Dados;
+
 public class TelaAtendimento {
 
     private JPanel tela = new JPanel();
@@ -26,6 +29,7 @@ public class TelaAtendimento {
     JLabel doencas = new JLabel("Possui algum tipo de doença?");
 
     JButton finalizar = new JButton("Finalizar Atendimento");
+    
 
 
     public static JTextField txtfluxo_vaginal;
@@ -35,16 +39,16 @@ public class TelaAtendimento {
     public static JTextField txtdoencas;
    
 
-public static void main(String args[]) {
-        new TelaAtendimento();
+public static void main(String args[], int index) {
+        new TelaAtendimento(index);
     
 }
 
-public TelaAtendimento(){
-    initialize();
+public TelaAtendimento(int index){
+    initialize(index);
 }
 
-private void initialize(){
+private void initialize(int index){
 
         frame = new JFrame();
         frame.setBounds(300,300,500,500);
@@ -108,10 +112,11 @@ private void initialize(){
 
         finalizar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
+                Dados.getCiclo().get(index).setAtendimento(new Atendimento(txtfluxo_vaginal.getText(), txttoma_remedio.getText(), txtmedicamento_receitado.getText(), txtdoencas.getText(), txtsensibilidade.getText()));
                 Object one = e.getSource();
                 if (one == finalizar){
                     frame.dispose();
-                    TelaSintomas.main(null);
+                    TelaSintomas.main(null, index);
             }
         }
 
@@ -119,8 +124,14 @@ private void initialize(){
 
       finalizar.setBackground(new Color(147, 112, 219));
       finalizar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 14));
-      finalizar.setBounds(110,330,250,40);
+      finalizar.setBounds(110,390,250,40);
       frame.getContentPane().add(finalizar);
+
+
+     
+
+
+
 
       
 }

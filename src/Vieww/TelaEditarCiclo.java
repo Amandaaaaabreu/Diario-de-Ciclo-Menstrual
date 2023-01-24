@@ -1,12 +1,5 @@
 package Vieww;
 
-import java.awt.Font;
-import java.awt.Color;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-
-import java.text.ParseException;
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
@@ -18,25 +11,29 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.MaskFormatter;
 
-
 import Controle.ControleCadastrarCiclo;
+import Modelo.Atendimento;
 import Modelo.Ciclo;
 import Modelo.Dados;
+import Modelo.Sintomas;
 
-public class CadastroCiclo {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Font;
+import java.awt.Color;
+import java.text.ParseException;
 
-    static Ciclo cicloCadastrado;
+public class TelaEditarCiclo {
 
     ControleCadastrarCiclo ligando = new ControleCadastrarCiclo();
 
     private JPanel tela = new JPanel();
-    private JFrame frame = new JFrame("Tela de Cadastro Ciclo");
-
-    JLabel titulo = new JLabel("Cadastro do Ciclo");
-    JLabel inserir = new JLabel("Realize seu Cadastro Abaixo");
+    private JFrame frame = new JFrame("Tela de Editar Ciclo");
 
     JLabel nome = new JLabel("Digite seu nome:");
     JLabel cpf = new JLabel("Digite seu CPF:");
+
+    JLabel inserir = new JLabel("Edite o que deseja mudar abaixo:");
     
     JLabel data_nascimento = new JLabel("Data de Nascimento:");
     JLabel toma_anticoncepcional = new JLabel("Você toma anticoncepcional? ");
@@ -45,10 +42,7 @@ public class CadastroCiclo {
     JLabel media_ciclo = new JLabel("Em média, seu ciclo dura quantos dias? ");
     JLabel numero = new JLabel("Digite um id de verificação:");
 
-    JButton fim = new JButton("Cadastro Ciclo");
-    
-    
-    static JButton cancelar = new JButton("Tela Inicial");
+    JButton atualizar = new JButton("Atualizar");
 
     public static JTextField txtnome;
     public static JTextField txtcpf;
@@ -58,19 +52,30 @@ public class CadastroCiclo {
     public static JTextField txtfim_menstruacao;
     public static JTextField txtmedia_ciclo;
     public static JTextField txtnumero;
-    
 
 
-    public static void main(String args[]) {
-        new CadastroCiclo();
+    public static String SelecionarUsuaria(){
+
+        //Object[] opcoes = {Dados.getCiclo()};
+        String valor = JOptionPane.showInputDialog("Digite o seu nome");
+        //String valor = (String) JOptionPane.showInputDialog( null , "Escolha um perfil" , "Perfis" , JOptionPane.QUESTION_MESSAGE, null , opcoes , null );
+        return valor;
+        
+        
     }
 
-    public CadastroCiclo() {
-        initialize();
+    public static void main(String[] args, int index){
+        new TelaEditarCiclo(index);
     }
 
-    private void initialize() {
+    public TelaEditarCiclo(int index){
+        initialize(index);
+    }
 
+    private void initialize(int index){
+        Ciclo ciclo = Dados.getCiclo().get(index);
+        Atendimento atendimento = ciclo.getAtendimento();
+        Sintomas sintomas = ciclo.getSintomas();
         frame = new JFrame();
         frame.setBounds(300, 300, 500, 500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -79,17 +84,12 @@ public class CadastroCiclo {
         frame.setVisible(true);
         frame.getContentPane().setLayout(null);
 
-        titulo.setFont(new java.awt.Font("Times New Roman", 1, 28));
-        titulo.setBounds(120, 30, 600, 50);
-        titulo.setForeground(new java.awt.Color(102, 0, 102));
-        frame.getContentPane().add(titulo);
-
         inserir.setFont(new java.awt.Font("Luthier", Font.ITALIC, 14));
         inserir.setBounds(20, 80, 600, 50);
         inserir.setForeground(new java.awt.Color(49, 79, 79));
         frame.getContentPane().add(inserir);
 
-
+        
         // edicao nome
         nome.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
         nome.setBounds(20, 130, 600, 50);
@@ -169,6 +169,7 @@ public class CadastroCiclo {
         // txtnome
         txtnome = new JTextField();
         txtnome.setBounds(120, 145, 345, 23);
+        txtnome.setText(ciclo.getNome()); // Colocar pra todas as váriaveis
         frame.getContentPane().add(txtnome);
 
         
@@ -202,38 +203,19 @@ public class CadastroCiclo {
         txtnumero.setBounds(180, 345, 283, 23);
         frame.getContentPane().add(txtnumero);
 
+        
+        atualizar.setForeground(new java.awt.Color(49, 79, 79));
+        atualizar.setBackground(new Color(216, 196, 216));
+        atualizar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
+        atualizar.setBorder(BorderFactory.createLineBorder(new Color(147, 112, 219), 8));
+        atualizar.setBounds(50, 390, 100, 40);
+        frame.getContentPane().add(atualizar);
 
-        cancelar.setForeground(new java.awt.Color(49, 79, 79));
-        cancelar.setBackground(new Color(216, 191, 216));
-        cancelar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
-        cancelar.setBorder(BorderFactory.createLineBorder(new Color(147, 112, 219), 8));
-        cancelar.setBounds(330, 390, 120, 40);
-        frame.getContentPane().add(cancelar);
 
-        cancelar.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                Object one = e.getSource();
-                if (one == cancelar) {
-                    frame.dispose();
-                    TelaMenu.main(null);
-                }
-            }
+        atualizar.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
 
-        });
-
-       
-
-        fim.setForeground(new java.awt.Color(49, 79, 79));
-        fim.setBackground(new Color(216, 196, 216));
-        fim.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
-        fim.setBorder(BorderFactory.createLineBorder(new Color(147, 112, 219), 8));
-        fim.setBounds(50, 390, 100, 40);
-        frame.getContentPane().add(fim);
-
-        fim.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-
+                
                 String avisoErro = ligando.confereCadastro(txtnome.getText(), txtcpf.getText(), txtdata_nascimento.getText(),txttoma_anticoncepcional.getText(), txtinicio_menstruacao.getText(),txtfim_menstruacao.getText(),txtmedia_ciclo.getText(), txtnumero.getText());
 
                 if (avisoErro == null) {
@@ -244,11 +226,13 @@ public class CadastroCiclo {
                 if (avisoErro.length() < 0) {
                     JOptionPane.showMessageDialog(null, avisoErro, "ERRO", JOptionPane.ERROR_MESSAGE);
                 } else {
-                    int ConfirmarCadastro = JOptionPane.showConfirmDialog(null, "Deseja Finalizar Cadastro?", "Finalizar Cadastro",
-                            JOptionPane.YES_NO_OPTION);
+                    int ConfirmarCadastro = JOptionPane.showConfirmDialog(null, "Deseja Atualizar Cadastro?", "Atualizar Cadastro",
+                            JOptionPane.YES_NO_CANCEL_OPTION);
                     
                     if(ConfirmarCadastro == 0){
-                        Dados.getCiclo().add(new Ciclo(txtnome.getText(), txtcpf.getText(), txtdata_nascimento.getText(),txttoma_anticoncepcional.getText(), txtinicio_menstruacao.getText(),txtfim_menstruacao.getText(),txtmedia_ciclo.getText(), txtnumero.getText()));
+                        Dados.getCiclo().set(index, new Ciclo(txtnome.getText(), txtcpf.getText(), txtdata_nascimento.getText(),txttoma_anticoncepcional.getText(), txtinicio_menstruacao.getText(),txtfim_menstruacao.getText(),txtmedia_ciclo.getText(), txtnumero.getText()));
+                        Dados.getCiclo().get(index).setAtendimento(atendimento);
+                        Dados.getCiclo().get(index).setSintomas(sintomas);
 
                         frame.dispose();
                         TelaMenu.main(null);
@@ -263,88 +247,10 @@ public class CadastroCiclo {
                 }
 
             }
-
         });
 
+
+
     }
-
-    public static JTextField gettxtnome() {
-        return txtnome;
-    }
-
-    public static JTextField gettxtcpf() {
-        return txtcpf;
-    }
-
-    public static JTextField gettxtdata_nascimento() {
-        return txtdata_nascimento;
-    }
-
-    public static JTextField gettxttoma_anticoncepcional() {
-        return txttoma_anticoncepcional;
-    }
-
-    public static JTextField gettxtnumero() {
-        return txtnumero;
-    }
-
-    public static JTextField gettxtinicio_menstruacao() {
-        return txtinicio_menstruacao;
-    }
-
-    public static JTextField gettxtfim_menstruacao() {
-        return txtfim_menstruacao;
-    }
-
-    public static JTextField gettxtmedia_ciclo() {
-        return txtmedia_ciclo;
-    }
-
-    public JButton getFim() {
-        return fim;
-    }
-
-    public static JButton getCancelar() {
-        return cancelar;
-    }
-
-
-
-
-
-
-
-
-
-
-    // buscar.addActionListener(new ActionListener() {
-    /*public void actionPerformed(ActionEvent e) {
-        ligando.executarBotao(e.getSource());
-        Object src = e.getSource();
-        if (src == buscar){
-            frame.dispose();
-        BuscarCiclo.main(null);
-    }
-
-    cicloCadastrado = ControleCadastrarCiclo.validarCadastro(txtnumero.getText());
     
-    if(CadastroCiclo.cicloCadastrado==null){
-
-    }
-
-    else
-    {
-        frame.dispose();
-        TelaMenu.main(null);
-    }
-    }*/
-
-    public static  Ciclo validarBusca(String numero){
-        for(Ciclo a : Dados.getCiclo()){
-            if(a.getNumero().equals(txtnumero)){
-                return a ;
-            }
-        }
-        return null;
-    }
 }

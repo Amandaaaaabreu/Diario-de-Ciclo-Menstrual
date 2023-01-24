@@ -12,11 +12,123 @@ import Modelo.*;
 import Modelo.Usuaria;
 import Vieww.CadastroCiclo;
 import Vieww.CadastroUsuaria;
+import Vieww.TelaEditarCiclo;
 import Vieww.TelaMenu;
 
 public class ControleCadastrarCiclo {
+    public Ciclo obterModelo(){
 
-    private Usuaria usuariaSelecionada;
+        String txtnome= CadastroCiclo.gettxtnome().getText();
+        String txtcpf= CadastroCiclo.gettxtcpf().getText();
+        String txtdata_nascimento= CadastroCiclo.gettxtdata_nascimento().getText();
+        String txttoma_anticoncepcional= CadastroCiclo.gettxttoma_anticoncepcional().getText();
+        String txtinicio_menstruacao = CadastroCiclo.gettxtinicio_menstruacao().getText();
+        String txtfim_menstruacao = CadastroCiclo.gettxtfim_menstruacao().getText();
+        String txtmedia_ciclo = CadastroCiclo.gettxtmedia_ciclo().getText();
+        String txtnumero = CadastroCiclo.gettxtnumero().getText();
+
+
+        
+        if(txtnome.isEmpty()){
+            CadastroCiclo.gettxtnome().setText("");
+            return null;
+        }
+        if(txtcpf.isEmpty()){
+            CadastroCiclo.gettxtcpf().setText("");
+            return null;
+        }
+        if(txtdata_nascimento.isEmpty()){
+            CadastroCiclo.gettxtdata_nascimento().setText("");
+            return null;
+        }
+        if(txttoma_anticoncepcional.isEmpty()){
+            CadastroCiclo.gettxttoma_anticoncepcional().setText("");
+            return null;
+        }
+        if(txtinicio_menstruacao.isEmpty()){
+            CadastroCiclo.gettxtinicio_menstruacao().setText("");
+            return null;
+        }
+        if(txtfim_menstruacao.isEmpty()){
+            CadastroCiclo.gettxtfim_menstruacao().setText("");
+            return null;
+        }
+        if(txtmedia_ciclo.isEmpty()){
+            CadastroCiclo.gettxtmedia_ciclo().setText("");
+            return null;
+        }
+        if(txtnumero.isEmpty()){
+            CadastroCiclo.gettxtnumero().setText("");
+            return null;
+        }
+        return new Ciclo(txtnome,txtcpf,txtdata_nascimento,txttoma_anticoncepcional,txtinicio_menstruacao, txtfim_menstruacao,txtmedia_ciclo,txtnumero);
+
+    }
+
+    public String confereCadastro(String txtnome,String txtcpf,String txtdata_nascimento,String txttoma_anticoncepcional,String txtinicio_menstruacao, String txtfim_menstruacao,String txtmedia_ciclo,String txtnumero){
+        String avisoErro = "";
+
+        if(txtnome.isEmpty()){
+            CadastroCiclo.gettxtnome().setText("");
+            return null;
+        }
+        if(txtcpf.isEmpty()){
+            CadastroCiclo.gettxtcpf().setText("");
+            return null;
+        }
+        if(txtdata_nascimento.isEmpty()){
+            CadastroCiclo.gettxtdata_nascimento().setText("");
+            return null;
+        }
+        if(txttoma_anticoncepcional.isEmpty()){
+            CadastroCiclo.gettxttoma_anticoncepcional().setText("");
+            return null;
+        }
+        if(txtinicio_menstruacao.isEmpty()){
+            CadastroCiclo.gettxtinicio_menstruacao().setText("");
+            return null;
+        }
+        if(txtnumero.isEmpty()){
+            CadastroCiclo.gettxtfim_menstruacao().setText("");
+            return null;
+        }
+        if(txtfim_menstruacao.isEmpty()){
+            CadastroCiclo.gettxtfim_menstruacao().setText("");
+            return null;
+        }
+        if(txtmedia_ciclo.isEmpty()){
+            CadastroCiclo.gettxtmedia_ciclo().setText("");
+            return null;
+        }
+        if(!validarTxtNome(txtnome)){
+            avisoErro += "Nome Inválida!\n";
+        }
+        if(!validarTxtTomaAnticoncepcional(txttoma_anticoncepcional)){
+            avisoErro += "Resposta Inválida!\n";
+        }
+        
+            return avisoErro;
+        
+    }
+
+    public boolean validarTxtNome(String txtnomeInput){
+        boolean verificar = true;
+        if(!txtnomeInput.substring(0).matches("[A-Z]*")){
+            verificar = false;
+        }
+        return verificar;
+    }
+    
+    public boolean validarTxtTomaAnticoncepcional(String txttoma_anticoncepcionalInput){
+        boolean verificar = true;
+        if(!txttoma_anticoncepcionalInput.substring(0).matches("[A-Z]*")){
+            verificar = false;
+        }
+        return verificar;
+    }
+    
+
+    //private Usuaria usuariaSelecionada;
 
 public Usuaria salvarUsuariaEscolhida(String nome){
 
@@ -27,105 +139,6 @@ public Usuaria salvarUsuariaEscolhida(String nome){
     }
 
     return null;
-}
-public Object[] gerarArrayUsuaria(){
-    List<String> exemplo = new ArrayList<>();
-    for(Usuaria usuaria : Dados.getUsuaria()){
-        exemplo.add(usuaria.getNome());
-    }
-
-    return exemplo.toArray();
-}
-
-public Ciclo obterExemplo (){
-    
-    String txtNumero = CadastroCiclo.gettxtnumero().getText();
-    String tipoDuracaoMedia = CadastroCiclo.gettxtfim_menstruacao().getText();
-    String tipoInicioCiclo = CadastroCiclo.gettxtinicio_menstruacao().getText();
-    String tipoFimCiclo = CadastroCiclo.gettxtmedia_ciclo().getText();
-
-    String dataInicio = tipoInicioCiclo;
-    String dataFinal = tipoFimCiclo;
-    int duracao;
-
-    if(txtNumero.isEmpty()){
-        CadastroCiclo.gettxtnumero().setText("");
-        return null;
-    }
-
-   // SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
-
-     
-    try{
-        duracao = Integer.parseInt(tipoDuracaoMedia);
-    }
-    catch (NumberFormatException e){
-        CadastroCiclo.gettxtmedia_ciclo().setText("");
-        return null;
-    }
-
-     return new Ciclo(dataInicio, dataFinal, duracao, txtNumero);
-     
-}
-
-public void receberExemplo(Ciclo exemplo){
-    Dados.getCiclo().add(exemplo);
-}
-
-
-// limpa os campos de texto 
-
-public void zeraCampo(){
-    CadastroCiclo.gettxtnumero().getText();
-    CadastroCiclo.gettxtinicio_menstruacao().setText("");
-    CadastroCiclo.gettxtfim_menstruacao().setText("");
-    CadastroCiclo.gettxtmedia_ciclo().setText("");
-}
-
-public void executarBotao(Object botaoFonte){
-    if(botaoFonte == CadastroCiclo.getCancelar()){
-          zeraCampo();
-
-
-          TelaMenu.main(null);
-    }
-    else{
-        usuariaSelecionada = salvarUsuariaEscolhida((CadastroUsuaria.getTxtNome().getSelectedText().toString()));
-        Ciclo exemplo = obterExemplo();
-
-        if(exemplo != null){
-            receberExemplo(exemplo);
-            zeraCampo();
-        }
-    }
-}
-
-public static Ciclo validarBusca(String txtnumero){
-    for(Ciclo a : Dados.getCiclo()){
-        if(a.getNumero().equals(txtnumero)){
-            return a ;
-        }
-    }
-
-    return null;
-}
-
-
-public static Ciclo validarCadastro(String txtnumero){
-    for(Ciclo a : Dados.getCiclo()){
-        if(a.getNumero().equals(txtnumero)){
-            return a ;
-        }
-    }
-    return null;
-}
-
-public DefaultComboBoxModel<Object> atualizarExemplo(){
-    return new DefaultComboBoxModel<>((gerarArrayUsuaria()));
-}
-
-public Usuaria UsuariaEscolhida(){
-    return usuariaSelecionada;
 }
 
 }

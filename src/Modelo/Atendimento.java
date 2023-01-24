@@ -2,29 +2,31 @@ package Modelo;
 
 public class Atendimento {
     //atributos
-    private Boolean fluxo_vaginal;
-    private Boolean toma_remedio;
+    private String fluxo_vaginal;
+    private String toma_remedio;
     private String medicam_receitado;
     private String doencas;
+    private String sensibilidade;
 
     // construtores
-    public Atendimento(Boolean fluxo_vaginal, Boolean toma_remedio, String medicam_receitado, String doencas){
+    public Atendimento(String fluxo_vaginal, String toma_remedio, String medicam_receitado, String doencas, String sensibilidade){
         this.fluxo_vaginal = fluxo_vaginal;
         this.toma_remedio = toma_remedio;
         this.medicam_receitado = medicam_receitado;
         this.doencas = doencas;
+        this.sensibilidade = sensibilidade;
     }
     //gets e sets
-    public Boolean getFluxo_Vaginal(){
+    public String getFluxo_Vaginal(){
         return fluxo_vaginal;
     }
-    public void setFluxo_Vaginal(Boolean fluxo_vaginal){
+    public void setFluxo_Vaginal(String fluxo_vaginal){
         this.fluxo_vaginal = fluxo_vaginal;
     }
-    public Boolean getToma_Remedio(){
+    public String getToma_Remedio(){
         return toma_remedio;
     }
-    public void setToma_Remedio(Boolean toma_remedio){
+    public void setToma_Remedio(String toma_remedio){
         this.toma_remedio =toma_remedio;
     }
     public String getMedicam_Receitado(){
@@ -38,6 +40,12 @@ public class Atendimento {
     }
     public void setDoencas(String doencas){
         this.doencas = doencas;
+    }
+    public String getSensibilidade(){
+        return sensibilidade;
+    }
+    public void setSensibilidade(String sensibilidade){
+        this.sensibilidade = sensibilidade;
     }
 
 

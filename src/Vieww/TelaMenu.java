@@ -7,13 +7,16 @@ import java.awt.event.ActionListener;
 
 
 
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 import Controle.*;
+import Modelo.Ciclo;
 //import Vieww.*;
+import Modelo.Dados;
+import Modelo.*;
 
 
 public class TelaMenu {
@@ -39,6 +42,8 @@ public class TelaMenu {
 
     private void initialize() {
 
+        //Dados.getCiclo().add(new Ciclo("Pedro", "058.440.181-76", "25/05/2001","20/20/2020", "20/21/2121","25/26/2020","5", "10"));
+
         //editando frame 
         frame = new JFrame();
         frame.setBounds(300,300,500,500);
@@ -60,7 +65,7 @@ public class TelaMenu {
                 Object one = e.getSource();
                 if (one == usuaria){
                     frame.dispose();
-                   TelaPerfil.main(null);
+                   TelaPerfilUsuario.main(null);
                 }
 
                 
@@ -78,7 +83,7 @@ public class TelaMenu {
                 Object one = e.getSource();
                 if(one == ciclo){
                     frame.dispose();
-                    new CadastroCiclo();
+                    TelaPerfilCiclo.main(null);
                 }
             }
             
@@ -93,7 +98,19 @@ public class TelaMenu {
              public void actionPerformed(ActionEvent e){
                 Object one = e.getSource();
                 if(one == atendimento){
-                    new TelaAtendimento();
+                    String nomeEscolhido = TelaEditarCiclo.SelecionarUsuaria();
+                    int VerificadorExistencia = 0;
+                for(Ciclo c : Dados.getCiclo()){
+                    if(c.getNome().equals(nomeEscolhido)){
+                        VerificadorExistencia = 1;
+                        int index = Dados.getCiclo().indexOf(c);
+                        new TelaAtendimento(index);
+                    }
+                }
+
+                if(VerificadorExistencia == 0){
+                    JOptionPane.showMessageDialog(null, "Este Usuário não está cadastrado em nosso sistema", "ERRO", JOptionPane.ERROR_MESSAGE);
+                }
                 }
              }
         });
