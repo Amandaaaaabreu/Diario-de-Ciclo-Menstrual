@@ -1,6 +1,3 @@
-/** 
- 
- */
 
 package Vieww;
 
@@ -22,6 +19,13 @@ import Modelo.Ciclo;
 import Modelo.Dados;
 //import Modelo.*;
 
+/**
+ * Tela Menu. Tela principal que liga a todas as outras. 
+ * @version 1.0
+ * @author Amanda Abreu
+ * @since 2022
+ */
+
 
 public class TelaMenu {
     private JFrame frame;
@@ -30,21 +34,28 @@ public class TelaMenu {
 	JButton atendimento = new JButton("Atendimento");
     JButton editar = new JButton("Editar");
     protected JButton one;
-    public static ControleDados dados = new ControleDados();
+   
 
     public static void main(String args[]) {
         new TelaMenu();
 		
                
          }
-               
+      
+    /**
+     * Criando o software
+     */
     public TelaMenu(){
         initialize();
     }
 
+    /**
+     * inicia e implementa os componentes no conteiner
+     */
+
     private void initialize() {
 
-        //Dados.getCiclo().add(new Ciclo("Pedro", "058.440.181-76", "25/05/2001","20/20/2020", "20/21/2121","25/26/2020","5", "10"));
+        
 
         //editando frame 
         frame = new JFrame();

@@ -1,5 +1,10 @@
 package Controle;
 
+/**
+ * @author Amanda Abreu
+ * @version 1.0
+ * @since 2022
+ */
 public class ControleDadosUsuaria {
     
     public static boolean checkCPF(String valor) {

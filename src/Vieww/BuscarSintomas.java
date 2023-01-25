@@ -15,6 +15,13 @@ import javax.swing.border.EmptyBorder;
 import Modelo.Dados;
 import Modelo.Sintomas;
 
+/**
+ * Tela que busca o sintoma quando a usuária realiza o cadastro e faz o Atendimento
+ * @author Amanda Abreu
+ * @since 2022
+ * @version 1.0
+ */
+
 public class BuscarSintomas {
     private JPanel tela = new JPanel();
     private JFrame frame = new JFrame("Sintomas");
@@ -41,11 +48,18 @@ public class BuscarSintomas {
     public static void main(String args[], int index){
         new BuscarSintomas(index);
     }
+
+    /**
+     * Criando o software
+     */
     
     public BuscarSintomas(int index){
         initialize(index);
     }
     
+    /**
+     * inicia e implementa os componentes no conteiner
+     */
     private void initialize(int index){
         
         Sintomas sintomas = Dados.getCiclo().get(index).getSintomas();

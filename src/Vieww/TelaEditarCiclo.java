@@ -23,6 +23,13 @@ import java.awt.Font;
 import java.awt.Color;
 import java.text.ParseException;
 
+/**
+ * Tela que abre a tela de editar oo ciclo quando a usuaria solicita.
+ * @version 1.0
+ * @author Amanda Abreu
+ * @since 2022
+ */
+
 public class TelaEditarCiclo {
 
     ControleCadastrarCiclo ligando = new ControleCadastrarCiclo();
@@ -70,9 +77,17 @@ public class TelaEditarCiclo {
         new TelaEditarCiclo(index);
     }
 
+    /**
+     * Criando o software
+     */
+
     public TelaEditarCiclo(int index){
         initialize(index);
     }
+
+    /**
+     * inicia e implementa os componentes no conteiner
+     */
 
     private void initialize(int index){
         Ciclo ciclo = Dados.getCiclo().get(index);

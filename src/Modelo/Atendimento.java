@@ -1,4 +1,11 @@
+
 package Modelo;
+
+/** Classe Atendimento ultilizada para verificar os sintomas do usuário.
+ * @author Amanda Abreu
+ * @since 2022
+ * @version 1.0
+ */
 
 public class Atendimento {
     //atributos

@@ -15,6 +15,13 @@ import javax.swing.border.EmptyBorder;
 import Modelo.Dados;
 import Modelo.Sintomas;
 
+/**
+ * Tela que abre quando a usuária solicita quando finaliza o atendimento e faz algumas perguntas sobre quais sintomas a propria tem ou sente.
+ * @version 1.0
+ * @author Amanda Abreu
+ * @since 2022
+ */
+
 public class TelaSintomas { 
     private JPanel tela = new JPanel();
     private JFrame frame = new JFrame("Sintomas");

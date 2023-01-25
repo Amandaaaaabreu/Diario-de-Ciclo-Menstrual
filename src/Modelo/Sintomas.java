@@ -1,3 +1,7 @@
+/** Classe Sintomas que armazena as informações que o usuário na TelaSintomas.
+ * @author Amanda Abreu
+ * @since 2022
+ */
 package Modelo;
 
 public class Sintomas {

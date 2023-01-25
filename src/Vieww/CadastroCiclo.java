@@ -23,6 +23,13 @@ import Controle.ControleCadastrarCiclo;
 import Modelo.Ciclo;
 import Modelo.Dados;
 
+/**
+ * Tela de para Cadastrar o ciclo e também a usuaria. 
+ * @author AmandaAbreu
+ * @since 2022
+ * @version 1.0
+ */
+
 public class CadastroCiclo {
 
     static Ciclo cicloCadastrado;
@@ -63,9 +70,17 @@ public class CadastroCiclo {
         new CadastroCiclo();
     }
 
+    /**
+     * Criando o software
+     */
+
     public CadastroCiclo() {
         initialize();
     }
+
+    /**
+     * inicia e implementa os componentes no conteiner
+     */
 
     private void initialize() {
 

@@ -16,6 +16,13 @@ import javax.swing.border.EmptyBorder;
 import Modelo.Ciclo;
 import Modelo.Dados;
 
+/**
+ * TelaPerfilCiclo abre quando a usuaria deseja realizar o cadastro, ou alterar, excluir e busca-lo
+ * @version 1.0
+ * @author Amanda Abreu
+ * @since 2022
+ */
+
 public class TelaPerfilCiclo {
 
     private JPanel tela = new JPanel();

@@ -15,6 +15,13 @@ import javax.swing.border.EmptyBorder;
 import Modelo.Atendimento;
 import Modelo.Dados;
 
+/*
+ * Tela que procura o atendimento no "banco" quando a usuaria solicita.
+ * @author Amanda Abreu
+ * @since 2022
+ * @version 1.0
+ */
+
 
 public class BuscarAtendimento {
 
@@ -32,15 +39,25 @@ public class BuscarAtendimento {
 
     JButton voltar = new JButton("Voltar pra tela de Menu");
 
-    //JButton finalizar = new JButton("Finalizar Atendimento");
+    
 
+
+   
     public static void main(String args[], int index){
         new BuscarAtendimento(index);
     }
+
+    /**
+     * Criando o software
+     */
     
     public BuscarAtendimento(int index){
         initialize(index);
     }
+
+    /**
+     * inicia e implementa os componentes no conteiner
+     */
     
     private void initialize(int index){
         Atendimento atendimento = Dados.getCiclo().get(index).getAtendimento();

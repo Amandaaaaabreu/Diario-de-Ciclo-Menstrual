@@ -1,6 +1,10 @@
+
 package Modelo;
 
-// atributos
+/** Classe Ciclo herda de Usuária e armazena as informações que serão perguntadas para a usuária.
+ * @author Amanda Abreu
+ * @since 2022
+ */
 public class Ciclo extends Usuaria {
 
     private String inicio_menstruacao;
@@ -11,6 +15,14 @@ public class Ciclo extends Usuaria {
     private Atendimento atendimento;
 
     // gets e sets
+
+    /** 
+     * @param inicio_menstruacao       primeiro dia da memstruacao
+     * @param fim_menstruacao          ultimo dia da menstruacao
+     * @param duracao_ciclo            duracao do ciclo
+     * @param numero                    numero do cadastro
+       
+     */
 
     public Ciclo (String nome, String cpf, String data_nascimento, String toma_anticoncepcional, String  inicio_menstruacao , String fim_menstruacao, String duracao_ciclo, String numero ) {
         super(nome, cpf, data_nascimento, toma_anticoncepcional);

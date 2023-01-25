@@ -24,6 +24,13 @@ import javax.swing.border.EmptyBorder;
 import Modelo.Ciclo;
 import Modelo.Dados;
 
+/**
+ * Tela que buscar o ciclo quando a usuaria escreve seu nome 
+ * @author Amanda Abreu
+ * @version 1.0
+ * @since 2022
+ */
+
 public class BuscarCiclo {
 
     private JPanel tela = new JPanel();
@@ -64,9 +71,17 @@ public static void main(String args[], int index){
     new BuscarCiclo(index);
 }
 
+    /**
+     * Criando o software
+     */
+
 public BuscarCiclo(int index){
     initialize(index);
 }
+
+/**
+     * inicia e implementa os componentes no conteiner
+     */
 
 private void initialize(int index){
         Ciclo ciclo = Dados.getCiclo().get(index);

@@ -14,6 +14,14 @@ import Vieww.CadastroCiclo;
 import Vieww.TelaEditarCiclo;
 import Vieww.TelaMenu;
 
+
+ /**
+ * Classe que organiza e faz ligacao entre as classes view CadastarCiclo e model Ciclo, Usuaria, Atendimento e Sintomas
+ * @author Amanda Abreu
+ * @version 1.0
+ * @since 2022
+ */
+
 public class ControleCadastrarCiclo {
     public Ciclo obterModelo(){
 

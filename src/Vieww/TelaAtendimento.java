@@ -15,6 +15,13 @@ import javax.swing.border.EmptyBorder;
 import Modelo.Atendimento;
 import Modelo.Dados;
 
+/**
+ * Tela que abre o atendimento quando a usuaria solicita.
+ * @version 1.0
+ * @author Amanda Abreu
+ * @since 2022
+ */
+
 public class TelaAtendimento {
 
     private JPanel tela = new JPanel();
@@ -41,12 +48,21 @@ public class TelaAtendimento {
 
 public static void main(String args[], int index) {
         new TelaAtendimento(index);
-    
+   
 }
+
+
+    /**
+     *Criando o software
+     */
 
 public TelaAtendimento(int index){
     initialize(index);
 }
+
+/**
+     * inicia e implementa os componentes no conteiner
+     */
 
 private void initialize(int index){
 

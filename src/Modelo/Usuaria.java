@@ -1,4 +1,10 @@
+
 package Modelo;
+/** 
+ * Classe abstrata que contém os atributos de uma usuaria.
+ * @author Amanda Abreu
+ * @since 2022
+ */
 
 public abstract class Usuaria {
 
@@ -6,7 +12,15 @@ public abstract class Usuaria {
     private String cpf;
     private String data_nascimento;
     private String toma_anticoncepcional;
-
+     
+    /**
+     *Gera uma usuária e salva as informacoes na arrayList que está em Dados.
+     * @param nome
+     * @param cpf
+     * @param data_nascimento
+     * @param toma_anticoncepcional
+     
+      */
     
     public Usuaria (String nome, String cpf, String data_nascimento, String toma_anticoncepcional) {
         this.nome = nome;
