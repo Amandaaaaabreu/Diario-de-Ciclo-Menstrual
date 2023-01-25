@@ -43,6 +43,7 @@ public class BuscarCiclo {
 
     JButton verificarAtendimento = new JButton("Verificar Atendimento");
     JButton verificarSintomas = new JButton("Verificar Sintomas");
+    JButton voltar = new JButton("Voltar pra tela de Menu");
 
     public static JTextField txtnome;
     public static JTextField txtcpf;
@@ -158,6 +159,22 @@ private void initialize(int index){
             }
         });
 
+        voltar.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                Object obj = e.getSource();
+                if (obj == voltar) {
+                    TelaMenu.main(null);
+                }
+
+            }
+
+        });
+
+        voltar.setBackground(new Color(147, 112, 219));
+        voltar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 14));
+        voltar.setBounds(156,410,195,40);
+        frame.getContentPane().add(voltar);
+
 
 
         //////////////////////////////////////////////////////////////////////////////////////////////
@@ -166,62 +183,6 @@ private void initialize(int index){
 
 }
 
-/*private void initialize(){
-
-        frame = new JFrame();
-        frame.setBounds(300,300,500,500);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);
-        frame.setVisible(true);
-        frame.getContentPane().setLayout(null);
-
-        titulo.setForeground(new Color(240,92,138));
-		titulo.setFont(new Font("Didot", Font.PLAIN, 45));
-		titulo.setBounds(200, 40, 600, 50);
-		frame.getContentPane().add(titulo);
-
-        titulo1.setForeground(new Color(240,92,138));
-		titulo1.setFont(new Font("Roboto", Font.PLAIN, 20));
-		titulo1.setBounds(180, 95, 300, 30);
-		frame.getContentPane().add(titulo1);
-
-        txtnome = new JTextField();
-        txtnome.setColumns(10);
-		txtnome.setBounds(55,190,495,25);
-		frame.getContentPane().add(txtnome);
-
-        buscar.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                
-                
-                
-                CadastroCiclo.cicloCadastrado = CadastroCiclo.validarBusca(txtnumero.getText());
-                if(CadastroCiclo.txtnumero == null){
-                    JOptionPane.showMessageDialog(buscar, "Ciclo não encontrado");
-                }
-                else{
-                    frame.dispose();
-                    JOptionPane.showMessageDialog(buscar,"Número :" + CadastroCiclo.cicloCadastrado.getNumero());
-                }
-                frame.dispose();
-                TelaMenu.main(null);
-            }
-        });
-
-        buscar.setFont(new Font("Cambria", Font.PLAIN, 11));
-		buscar.setBackground(SystemColor.desktop);
-		buscar.setBounds(171, 148, 89, 23);
-		frame.getContentPane().add(buscar);
-
-
-
-
-
-
-}
-
-
-*/
 
 
 

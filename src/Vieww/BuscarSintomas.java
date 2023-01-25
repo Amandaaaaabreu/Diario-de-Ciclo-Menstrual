@@ -27,7 +27,9 @@ public class BuscarSintomas {
     JLabel outros  = new JLabel("Sente algo a mais: ");
     JLabel nada_incomoda  = new JLabel("Nada te incomoda: ");
 
-    JButton finalizar = new JButton("Finalizar Questionário");
+    JButton voltar = new JButton("Voltar pra tela de Menu");
+
+    
 
 
     public static JTextField txtcolicas_menstruais;
@@ -89,5 +91,21 @@ public class BuscarSintomas {
         nada_incomoda.setBounds(20, 240, 600, 50);
         nada_incomoda.setForeground(new java.awt.Color(49, 79, 79));
         frame.getContentPane().add(nada_incomoda);
+
+        voltar.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                Object obj = e.getSource();
+                if (obj == voltar) {
+                    TelaMenu.main(null);
+                }
+
+            }
+
+        });
+
+        voltar.setBackground(new Color(147, 112, 219));
+        voltar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 14));
+        voltar.setBounds(156,380,195,40);
+        frame.getContentPane().add(voltar);
     }
 }

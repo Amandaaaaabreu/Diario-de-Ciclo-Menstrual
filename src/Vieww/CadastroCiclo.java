@@ -306,37 +306,6 @@ public class CadastroCiclo {
         return cancelar;
     }
 
-
-
-
-
-
-
-
-
-
-    // buscar.addActionListener(new ActionListener() {
-    /*public void actionPerformed(ActionEvent e) {
-        ligando.executarBotao(e.getSource());
-        Object src = e.getSource();
-        if (src == buscar){
-            frame.dispose();
-        BuscarCiclo.main(null);
-    }
-
-    cicloCadastrado = ControleCadastrarCiclo.validarCadastro(txtnumero.getText());
-    
-    if(CadastroCiclo.cicloCadastrado==null){
-
-    }
-
-    else
-    {
-        frame.dispose();
-        TelaMenu.main(null);
-    }
-    }*/
-
     public static  Ciclo validarBusca(String numero){
         for(Ciclo a : Dados.getCiclo()){
             if(a.getNumero().equals(txtnumero)){

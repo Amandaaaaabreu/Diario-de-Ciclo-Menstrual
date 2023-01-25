@@ -30,6 +30,8 @@ public class BuscarAtendimento {
     JLabel medicamento_receitado = new JLabel("Remédios: ");
     JLabel doencas = new JLabel("Doenças: ");
 
+    JButton voltar = new JButton("Voltar pra tela de Menu");
+
     //JButton finalizar = new JButton("Finalizar Atendimento");
 
     public static void main(String args[], int index){
@@ -84,6 +86,22 @@ public class BuscarAtendimento {
         doencas.setBounds(20, 240, 600, 50);
         doencas.setForeground(new java.awt.Color(49, 79, 79));
         frame.getContentPane().add(doencas);
+
+        voltar.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                Object obj = e.getSource();
+                if (obj == voltar) {
+                    TelaMenu.main(null);
+                }
+
+            }
+
+        });
+
+        voltar.setBackground(new Color(147, 112, 219));
+        voltar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 14));
+        voltar.setBounds(156,380,195,40);
+        frame.getContentPane().add(voltar);
 
         
     }

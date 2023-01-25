@@ -28,7 +28,6 @@ public class TelaMenu {
     JLabel inicial = new JLabel("Diário  de Ciclo Menstrual");
 	JButton ciclo = new JButton("Cadastrar Ciclo");
 	JButton atendimento = new JButton("Atendimento");
-	JButton testetpm = new JButton("Teste TPM");
     JButton editar = new JButton("Editar");
     protected JButton one;
     public static ControleDados dados = new ControleDados();
@@ -104,23 +103,10 @@ public class TelaMenu {
 
         atendimento.setBackground(new Color(147, 112, 219));
         atendimento.setFont(new java.awt.Font("Luthier", Font.PLAIN, 14));
-        atendimento.setBounds(100,250,250,40);
+        atendimento.setBounds(100,270,250,40);
         frame.getContentPane().add(atendimento);
 
-        testetpm.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e ){
-                if(one ==testetpm){
-                    new TelaTesteTpm();
-                }
-            }
-        });
-
-        testetpm.setBackground(new Color(147, 112, 219));
-        testetpm.setFont(new java.awt.Font("Luthier", Font.PLAIN, 14));
-        testetpm.setBounds(100,320,250,40);
-        frame.getContentPane().add(testetpm);
-        
-        
+      
 
     }
 }

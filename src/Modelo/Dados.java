@@ -10,7 +10,6 @@ public class Dados {
     private static final ArrayList<Usuaria> usuarias = new ArrayList<>();
     private static final ArrayList<Ciclo> ciclos = new ArrayList<>();
     private static final ArrayList<Atendimento> atendimento = new ArrayList<>();
-    private static final ArrayList<TesteTpm> testeTpm = new ArrayList<>();
 
 
     private Dados(){
@@ -25,9 +24,6 @@ public class Dados {
         return ciclos;
     }
     
-    public static List<TesteTpm> getTesteTpm(){
-        return testeTpm ;
-    }
     
     public static List<Atendimento> getAtendimentos(){
         return atendimento;
