@@ -30,6 +30,8 @@ public class TelaEditarCiclo {
     private JPanel tela = new JPanel();
     private JFrame frame = new JFrame("Tela de Editar Ciclo");
 
+    JLabel titulo = new JLabel("Edição do Ciclo");
+
     JLabel nome = new JLabel("Digite seu nome:");
     JLabel cpf = new JLabel("Digite seu CPF:");
 
@@ -76,6 +78,7 @@ public class TelaEditarCiclo {
         Ciclo ciclo = Dados.getCiclo().get(index);
         Atendimento atendimento = ciclo.getAtendimento();
         Sintomas sintomas = ciclo.getSintomas();
+
         frame = new JFrame();
         frame.setBounds(300, 300, 500, 500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -84,7 +87,12 @@ public class TelaEditarCiclo {
         frame.setVisible(true);
         frame.getContentPane().setLayout(null);
 
-        inserir.setFont(new java.awt.Font("Luthier", Font.ITALIC, 14));
+        titulo.setFont(new java.awt.Font("Times New Roman", 1, 28));
+        titulo.setBounds(120, 30, 600, 50);
+        titulo.setForeground(new java.awt.Color(102, 0, 102));
+        frame.getContentPane().add(titulo);
+
+        inserir.setFont(new java.awt.Font("Times New Roman", Font.BOLD, 15));
         inserir.setBounds(20, 80, 600, 50);
         inserir.setForeground(new java.awt.Color(49, 79, 79));
         frame.getContentPane().add(inserir);
@@ -208,7 +216,7 @@ public class TelaEditarCiclo {
         atualizar.setBackground(new Color(216, 196, 216));
         atualizar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
         atualizar.setBorder(BorderFactory.createLineBorder(new Color(147, 112, 219), 8));
-        atualizar.setBounds(50, 390, 100, 40);
+        atualizar.setBounds(170, 390, 100, 40);
         frame.getContentPane().add(atualizar);
 
 

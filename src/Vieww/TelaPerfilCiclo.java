@@ -115,11 +115,10 @@ public class TelaPerfilCiclo {
         excluir.setBounds(100, 270, 250, 40);
         frame.getContentPane().add(excluir);
 
-        buscar.setForeground(new java.awt.Color(49, 79, 79));
-        buscar.setBackground(new Color(216, 191, 216));
-        buscar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
+        buscar.setBackground(new Color(147, 112, 219));
+        buscar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 14));
         buscar.setBorder(BorderFactory.createLineBorder(new Color(147, 112, 219), 8));
-        buscar.setBounds(180, 310, 120, 40);
+        buscar.setBounds(100, 335, 250, 40);
         frame.getContentPane().add(buscar);
 
         buscar.addActionListener(new ActionListener(){

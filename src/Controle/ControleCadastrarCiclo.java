@@ -11,7 +11,6 @@ import Modelo.Dados;
 import Modelo.*;
 import Modelo.Usuaria;
 import Vieww.CadastroCiclo;
-import Vieww.CadastroUsuaria;
 import Vieww.TelaEditarCiclo;
 import Vieww.TelaMenu;
 

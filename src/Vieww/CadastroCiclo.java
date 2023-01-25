@@ -33,7 +33,7 @@ public class CadastroCiclo {
     private JFrame frame = new JFrame("Tela de Cadastro Ciclo");
 
     JLabel titulo = new JLabel("Cadastro do Ciclo");
-    JLabel inserir = new JLabel("Realize seu Cadastro Abaixo");
+    JLabel inserir = new JLabel("Realize seu Cadastro abaixo:");
 
     JLabel nome = new JLabel("Digite seu nome:");
     JLabel cpf = new JLabel("Digite seu CPF:");
@@ -45,9 +45,7 @@ public class CadastroCiclo {
     JLabel media_ciclo = new JLabel("Em média, seu ciclo dura quantos dias? ");
     JLabel numero = new JLabel("Digite um id de verificação:");
 
-    JButton fim = new JButton("Cadastro Ciclo");
-    
-    
+    JButton fim = new JButton("Cadastrar Ciclo");
     static JButton cancelar = new JButton("Tela Inicial");
 
     public static JTextField txtnome;
@@ -84,7 +82,7 @@ public class CadastroCiclo {
         titulo.setForeground(new java.awt.Color(102, 0, 102));
         frame.getContentPane().add(titulo);
 
-        inserir.setFont(new java.awt.Font("Luthier", Font.ITALIC, 14));
+        inserir.setFont(new java.awt.Font("Times New Roman", Font.BOLD, 14));
         inserir.setBounds(20, 80, 600, 50);
         inserir.setForeground(new java.awt.Color(49, 79, 79));
         frame.getContentPane().add(inserir);
@@ -207,7 +205,7 @@ public class CadastroCiclo {
         cancelar.setBackground(new Color(216, 191, 216));
         cancelar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
         cancelar.setBorder(BorderFactory.createLineBorder(new Color(147, 112, 219), 8));
-        cancelar.setBounds(330, 390, 120, 40);
+        cancelar.setBounds(320, 400, 130, 50);
         frame.getContentPane().add(cancelar);
 
         cancelar.addActionListener(new ActionListener() {
@@ -227,7 +225,7 @@ public class CadastroCiclo {
         fim.setBackground(new Color(216, 196, 216));
         fim.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
         fim.setBorder(BorderFactory.createLineBorder(new Color(147, 112, 219), 8));
-        fim.setBounds(50, 390, 100, 40);
+        fim.setBounds(50, 400, 130, 50);
         frame.getContentPane().add(fim);
 
         fim.addActionListener(new ActionListener() {

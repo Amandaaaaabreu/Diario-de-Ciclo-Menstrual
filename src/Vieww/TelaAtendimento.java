@@ -124,7 +124,7 @@ private void initialize(int index){
 
       finalizar.setBackground(new Color(147, 112, 219));
       finalizar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 14));
-      finalizar.setBounds(110,390,250,40);
+      finalizar.setBounds(110,360,250,40);
       frame.getContentPane().add(finalizar);
 
 

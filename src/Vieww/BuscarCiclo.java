@@ -32,7 +32,7 @@ public class BuscarCiclo {
     JLabel nome = new JLabel("Nome: ");
     JLabel cpf = new JLabel("CPF: ");
 
-    JLabel inserir = new JLabel("Informações do seu Ciclo: ");
+    JLabel inserir = new JLabel("Informações do seu Ciclo ");
     
     JLabel data_nascimento = new JLabel("Data de Nascimento: ");
     JLabel toma_anticoncepcional = new JLabel("Toma anticoncepcional: ");
@@ -77,23 +77,23 @@ private void initialize(int index){
         frame.setVisible(true);
         frame.getContentPane().setLayout(null);
 
-        inserir.setFont(new java.awt.Font("Luthier", Font.ITALIC, 14));
-        inserir.setBounds(20, 80, 600, 50);
-        inserir.setForeground(new java.awt.Color(49, 79, 79));
+        inserir.setFont(new java.awt.Font("Times New Roman", 1, 28));
+        inserir.setBounds(83, 60, 600, 50);
+        inserir.setForeground(new java.awt.Color(102, 0, 102));;
         frame.getContentPane().add(inserir);
 
         
         // edicao nome
         nome.setText(nome.getText() + ciclo.getNome());
         nome.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
-        nome.setBounds(20, 130, 600, 50);
+        nome.setBounds(20, 131, 600, 50);
         nome.setForeground(new java.awt.Color(49, 79, 79));
         frame.getContentPane().add(nome);
 
         // edicao cpf
         cpf.setText(cpf.getText() + ciclo.getCpf());
         cpf.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
-        cpf.setBounds(20, 160, 600, 50);
+        cpf.setBounds(20, 159, 600, 50);
         cpf.setForeground(new java.awt.Color(49, 79, 79));
         frame.getContentPane().add(cpf);
 
@@ -101,14 +101,14 @@ private void initialize(int index){
         // edicao data de nascimento
         data_nascimento.setText(data_nascimento.getText() + ciclo.getData_Nascimento());
         data_nascimento.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
-        data_nascimento.setBounds(20, 190, 600, 50);
+        data_nascimento.setBounds(20, 185, 600, 50);
         data_nascimento.setForeground(new java.awt.Color(49, 79, 79));
         frame.getContentPane().add(data_nascimento);
 
         // edicao toma anticoncepcional
         toma_anticoncepcional.setText(toma_anticoncepcional.getText() + ciclo.getToma_Anticoncepcional());
         toma_anticoncepcional.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
-        toma_anticoncepcional.setBounds(20, 215, 600, 50);
+        toma_anticoncepcional.setBounds(20, 212, 600, 50);
         toma_anticoncepcional.setForeground(new java.awt.Color(49, 79, 79));
         frame.getContentPane().add(toma_anticoncepcional);
 
@@ -132,12 +132,12 @@ private void initialize(int index){
 
         verificarAtendimento.setFont(new java.awt.Font("Luthier", Font.PLAIN, 14));
         verificarAtendimento.setBackground(new Color(147, 112, 219));
-        verificarAtendimento.setBounds(100, 150, 250, 40);
+        verificarAtendimento.setBounds(50, 360, 180, 40);
         frame.getContentPane().add(verificarAtendimento);
 
         verificarSintomas.setBackground(new Color(147, 112, 219));
         verificarSintomas.setFont(new java.awt.Font("Luthier", Font.PLAIN, 14));
-        verificarSintomas.setBounds(110,360,250,40);
+        verificarSintomas.setBounds(245,360,180,40);
         frame.getContentPane().add(verificarSintomas);
 
         verificarAtendimento.addActionListener(new ActionListener(){

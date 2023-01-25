@@ -19,7 +19,7 @@ public class BuscarSintomas {
     private JPanel tela = new JPanel();
     private JFrame frame = new JFrame("Sintomas");
 
-    JLabel titulo =  new JLabel("Verifique os seus sintomas abaixo:");
+    JLabel titulo =  new JLabel("Verifique os seus Sintomas abaixo");
 
     JLabel colicas_mentruais = new JLabel("Sente Cólicas Menstruais: ");
     JLabel sintomas_tpm  = new JLabel("Sente sintomas da TPM: ");
@@ -55,8 +55,8 @@ public class BuscarSintomas {
         frame.setVisible(true);
         frame.getContentPane().setLayout(null);
 
-        titulo.setFont(new java.awt.Font("Times New Roman", 1, 24));
-        titulo.setBounds(94, 30, 600, 50);
+        titulo.setFont(new java.awt.Font("Times New Roman", 1, 20));
+        titulo.setBounds(85, 30, 600, 50);
         titulo.setForeground(new java.awt.Color(102, 0, 102));
         frame.getContentPane().add(titulo);
 

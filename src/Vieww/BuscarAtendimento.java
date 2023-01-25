@@ -50,8 +50,8 @@ public class BuscarAtendimento {
         frame.setVisible(true);
         frame.getContentPane().setLayout(null);
 
-        titulo.setFont(new java.awt.Font("Times New Roman", 1, 28));
-        titulo.setBounds(53, 30, 600, 50);
+        titulo.setFont(new java.awt.Font("Times New Roman", 1, 20));
+        titulo.setBounds(53, 50, 600, 50);
         titulo.setForeground(new java.awt.Color(102, 0, 102));
         frame.getContentPane().add(titulo);
 
