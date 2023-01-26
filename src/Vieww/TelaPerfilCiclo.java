@@ -17,7 +17,7 @@ import Modelo.Ciclo;
 import Modelo.Dados;
 
 /**
- * TelaPerfilCiclo abre quando a usuaria deseja realizar o cadastro, ou alterar, excluir e busca-lo
+ * TelaPerfilCiclo abre quando a usuaria deseja realizar o cadastro, ou alterar, excluir e busca-lo.
  * @version 1.0
  * @author Amanda Abreu
  * @since 2022
@@ -38,9 +38,18 @@ public class TelaPerfilCiclo {
         new TelaPerfilCiclo();
     }
 
+     /**
+     * Criando o software
+     */
+
     public TelaPerfilCiclo() {
         initialize();
     }
+
+     /**
+     * inicia e implementa os componentes no conteiner
+     */
+
 
     private void initialize() {
 
@@ -72,6 +81,10 @@ public class TelaPerfilCiclo {
         cadastro.setBounds(100, 150, 250, 40);
         frame.getContentPane().add(cadastro);
 
+        /**
+         * Quando a usuaria quiser editar seu cadastro ela irá digitar o nome que ela informou no seu cadastro e conseguirá editar. 
+         */
+
         editar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String nomeEscolhido = TelaEditarCiclo.SelecionarUsuaria();
@@ -83,6 +96,10 @@ public class TelaPerfilCiclo {
                         TelaEditarCiclo.main(null, index);
                     }
                 }
+
+                /**
+                 * Caso a usuaria tente editar seu cadastro mesmo sem te-lo feito aparecer uma mensagem de erro.
+                 */
 
                 if(VerificadorExistencia == 0){
                     JOptionPane.showMessageDialog(null, "Este Usuário não está cadastrado em nosso sistema", "ERRO", JOptionPane.ERROR_MESSAGE);
@@ -96,6 +113,11 @@ public class TelaPerfilCiclo {
         editar.setFont(new java.awt.Font("Luthier", Font.PLAIN, 14));
         editar.setBounds(100, 210, 250, 40);
         frame.getContentPane().add(editar);
+
+
+        /**
+         * Caso a usuaria queira excluir seu cadastro, a propria terá que informar o nome que colocou no seu cadastro e conseguirá excluir facilmente.
+         */
 
         excluir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -127,6 +149,10 @@ public class TelaPerfilCiclo {
         buscar.setBorder(BorderFactory.createLineBorder(new Color(147, 112, 219), 8));
         buscar.setBounds(100, 335, 250, 40);
         frame.getContentPane().add(buscar);
+
+        /**
+         * Quando já cadastrada, a usuaria poderá ver seu cadastro tanto pessoal quanto do ciclo através do botão buscar. Apos digitado seu nome que foi informado no   cadastro  ela conseguirá buscar e ver todas as informacoes.
+         */
 
         buscar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {

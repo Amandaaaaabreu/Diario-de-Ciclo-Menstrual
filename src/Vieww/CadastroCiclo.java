@@ -128,7 +128,9 @@ public class CadastroCiclo {
         toma_anticoncepcional.setForeground(new java.awt.Color(49, 79, 79));
         frame.getContentPane().add(toma_anticoncepcional);
 
-        // permite apenas numeros no campo cpf e a digitacao especifica
+        /**
+         * Permite apenas numeros no campo cpf e a digitacao especifica
+         */
 
         MaskFormatter tipocpf = null;
         try {
@@ -235,7 +237,9 @@ public class CadastroCiclo {
         });
 
        
-
+        /**
+         * Verfica as informacoes que a usuaria colocou no campo de resposta antes de cadastra-la. Caso a usuaria não preencha os campos ou preencha errado, retorna uma mensagem de erro. 
+         */
         fim.setForeground(new java.awt.Color(49, 79, 79));
         fim.setBackground(new Color(216, 196, 216));
         fim.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
@@ -280,6 +284,9 @@ public class CadastroCiclo {
         });
 
     }
+    /**
+     * Retorna a resposta que o usuário colocou na caixa do JTextField
+     */
 
     public static JTextField gettxtnome() {
         return txtnome;

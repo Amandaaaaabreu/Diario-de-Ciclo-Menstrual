@@ -16,11 +16,15 @@ import Vieww.TelaMenu;
 
 
  /**
- * Classe que organiza e faz ligacao entre as classes view CadastarCiclo e model Ciclo, Usuaria, Atendimento e Sintomas
+ * Classe que organiza e faz ligacao entre as classes view CadastarCiclo e model Ciclo, Usuaria, Atendimento e Sintomas.
  * @author Amanda Abreu
  * @version 1.0
  * @since 2022
  */
+
+ /*
+  * Retorna uma usuaria.
+  */
 
 public class ControleCadastrarCiclo {
     public Ciclo obterModelo(){
@@ -117,6 +121,10 @@ public class ControleCadastrarCiclo {
             return avisoErro;
         
     }
+
+    /**
+     * Valida a resposta do usuário, para que ele possa responder tudo de forma correta. 
+     */
 
     public boolean validarTxtNome(String txtnomeInput){
         boolean verificar = true;
