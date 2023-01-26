@@ -16,7 +16,7 @@ import Modelo.Atendimento;
 import Modelo.Dados;
 
 /*
- * Tela que procura o atendimento no "banco" quando a usuaria solicita.
+ * Tela que procura por ATENDIMENTO no "banco" quando a usuaria solicita.
  * @author Amanda Abreu
  * @since 2022
  * @version 1.0

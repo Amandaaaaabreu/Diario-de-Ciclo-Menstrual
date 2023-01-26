@@ -91,6 +91,11 @@ public class TelaMenu {
         ciclo.setBounds(100, 180, 250, 40);
         frame.getContentPane().add(ciclo);
 
+
+        /**
+         * Verifica se a usuaria está no sistema perguntando seu nome, para depois liberar pra propria fazer o atendimento.
+         */
+
         atendimento.addActionListener(new ActionListener(){
              public void actionPerformed(ActionEvent e){
                 Object one = e.getSource();

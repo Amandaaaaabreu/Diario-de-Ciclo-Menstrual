@@ -151,7 +151,7 @@ public class TelaPerfilCiclo {
         frame.getContentPane().add(buscar);
 
         /**
-         * Quando já cadastrada, a usuaria poderá ver seu cadastro tanto pessoal quanto do ciclo através do botão buscar. Apos digitado seu nome que foi informado no   cadastro  ela conseguirá buscar e ver todas as informacoes.
+         * Quando já cadastrada, a usuaria poderá ver seu cadastro tanto pessoal quanto do ciclo através do botão buscar. Apos digitado seu nome que foi informado no cadastro  ela conseguirá buscar e ver todas as informacoes.
          */
 
         buscar.addActionListener(new ActionListener(){
