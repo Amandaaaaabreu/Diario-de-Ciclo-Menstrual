@@ -83,6 +83,7 @@ public class TelaPerfilCiclo {
 
         /**
          * Quando a usuaria quiser editar seu cadastro ela irá digitar o nome que ela informou no seu cadastro e conseguirá editar. 
+         * Caso a usuaria não esteja cadastrada retornará 0 e uma mensagem de erro, caso de 1 é pq ela está no "banco de dados"
          */
 
         editar.addActionListener(new ActionListener() {
