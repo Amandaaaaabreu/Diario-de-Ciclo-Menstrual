@@ -17,9 +17,10 @@ import Modelo.Ciclo;
 import Modelo.Dados;
 
 /**
- * TelaPerfilCiclo abre quando a usuaria deseja realizar o cadastro, ou alterar, excluir e busca-lo.
+ * TelaPerfilCiclo
+ * Abre quando a usuaria deseja realizar o cadastro, ou alterar, excluir e busca-lo.
  * @version 1.0
- * @author Amanda Abreu
+ * @author Amanda 
  * @since 2022
  */
 
@@ -38,17 +39,17 @@ public class TelaPerfilCiclo {
         new TelaPerfilCiclo();
     }
 
-     /**
-     * Criando o software
-     */
+    /**
+     * Criando o software.
+    */
 
     public TelaPerfilCiclo() {
         initialize();
     }
 
      /**
-     * inicia e implementa os componentes no conteiner
-     */
+     * Inicia e implementa os componentes no conteiner.
+    */
 
 
     private void initialize() {
@@ -82,8 +83,10 @@ public class TelaPerfilCiclo {
         frame.getContentPane().add(cadastro);
 
         /**
-         * Quando a usuaria quiser editar seu cadastro ela irá digitar o nome que ela informou no seu cadastro e conseguirá editar. 
-         * Caso a usuaria não esteja cadastrada retornará 0 e uma mensagem de erro, caso de 1 é pq ela está no "banco de dados"
+         * Caso a usuaria queira editar seu cadastro a propria so precisara informar seu nome. 
+         * Se a usuaria não estiver cadastrada, retornará 0 e uma mensagem de erro.
+         * Se estiver cadastrada conseguira fazer as edicoes que desejar. 
+         
          */
 
         editar.addActionListener(new ActionListener() {
@@ -98,9 +101,9 @@ public class TelaPerfilCiclo {
                     }
                 }
 
-                /**
-                 * Caso a usuaria tente editar seu cadastro mesmo sem te-lo feito aparecer uma mensagem de erro.
-                 */
+         /**
+         * Caso a usuaria tente editar seu cadastro mesmo sem te lo feito aparecera uma mensagem de erro.
+         */
 
                 if(VerificadorExistencia == 0){
                     JOptionPane.showMessageDialog(null, "Este Usuário não está cadastrado em nosso sistema", "ERRO", JOptionPane.ERROR_MESSAGE);
@@ -117,8 +120,8 @@ public class TelaPerfilCiclo {
 
 
         /**
-         * Caso a usuaria queira excluir seu cadastro, a propria terá que informar o nome que colocou no seu cadastro e conseguirá excluir facilmente.
-         */
+         * Caso a usuaria queira excluir seu cadastro, a propria terá que informar o nome que colocou no seu cadastro.
+        */
 
         excluir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -152,7 +155,8 @@ public class TelaPerfilCiclo {
         frame.getContentPane().add(buscar);
 
         /**
-         * Quando já cadastrada, a usuaria poderá ver seu cadastro tanto pessoal quanto do ciclo através do botão buscar. Apos digitado seu nome que foi informado no cadastro  ela conseguirá buscar e ver todas as informacoes.
+         * Quando já cadastrada, a usuaria poderá ver seu cadastro tanto pessoal quanto do ciclo através do botão buscar.
+         *  Apos digitado seu nome que foi informado no cadastro  ela conseguirá buscar e ver todas as informacoes.
          */
 
         buscar.addActionListener(new ActionListener(){

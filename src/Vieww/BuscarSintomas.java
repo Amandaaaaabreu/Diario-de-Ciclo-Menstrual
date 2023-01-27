@@ -16,8 +16,9 @@ import Modelo.Dados;
 import Modelo.Sintomas;
 
 /**
- * Tela que busca o sintoma quando a usuária realiza o cadastro e faz o Atendimento
- * @author Amanda Abreu
+ * BuscarSintoma
+ * Faz a busca pelo teste Sintomas, respondido pela usuaria.
+ * @author Amanda A
  * @since 2022
  * @version 1.0
  */
@@ -50,16 +51,16 @@ public class BuscarSintomas {
     }
 
     /**
-     * Criando o software
-     */
+     * Criando o software.
+    */
     
     public BuscarSintomas(int index){
         initialize(index);
     }
     
     /**
-     * inicia e implementa os componentes no conteiner
-     */
+     * Inicia e implementa os componentes no conteiner.
+    */
     private void initialize(int index){
         
         Sintomas sintomas = Dados.getCiclo().get(index).getSintomas();

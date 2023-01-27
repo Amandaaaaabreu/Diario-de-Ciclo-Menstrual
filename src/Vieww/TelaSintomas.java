@@ -16,9 +16,10 @@ import Modelo.Dados;
 import Modelo.Sintomas;
 
 /**
- * Tela que abre quando a usuária solicita quando finaliza o atendimento e faz algumas perguntas sobre quais sintomas a propria tem ou sente.
+ * TelaSintomas
+ * Abre quando finaliza o atendimento.
  * @version 1.0
- * @author Amanda Abreu
+ * @author Amanda 
  * @since 2022
  */
 
@@ -46,9 +47,21 @@ public class TelaSintomas {
 public static void main(String args[], int index){
     new TelaSintomas(index);
 }
+
+
+  /**
+   * Criando o software.
+  */
 public TelaSintomas(int index){
-    initialize(index);  
+  
+	initialize(index);  
 }
+
+
+   /**
+    * Inicia e implementa os componentes no conteiner.
+  */
+
 
 private void initialize(int index){
 

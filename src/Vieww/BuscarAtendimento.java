@@ -15,9 +15,10 @@ import javax.swing.border.EmptyBorder;
 import Modelo.Atendimento;
 import Modelo.Dados;
 
-/*
- * Tela que procura por ATENDIMENTO no "banco" quando a usuaria solicita.
- * @author Amanda Abreu
+/**
+ * TelaAtendimento
+ * Procura por ATENDIMENTO no "banco" quando a usuaria solicita.
+ * @author Amanda 
  * @since 2022
  * @version 1.0
  */

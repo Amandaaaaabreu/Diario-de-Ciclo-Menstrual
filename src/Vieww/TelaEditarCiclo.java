@@ -11,11 +11,8 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.MaskFormatter;
 
-import Controle.ControleCadastrarCiclo;
-import Modelo.Atendimento;
-import Modelo.Ciclo;
-import Modelo.Dados;
-import Modelo.Sintomas;
+import Controle.*;
+import Modelo.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,10 +20,11 @@ import java.awt.Font;
 import java.awt.Color;
 import java.text.ParseException;
 
-/**
- * Tela que abre a tela de editar oo ciclo quando a usuaria solicita.
+ /**
+ * TelaEditarCiclo
+ * Permite a usuaria que ela possa fazer alteracoes no cadastro, caso a propria queira.
  * @version 1.0
- * @author Amanda Abreu
+ * @author Amanda 
  * @since 2022
  */
 
@@ -78,7 +76,7 @@ public class TelaEditarCiclo {
     }
 
     /**
-     * Criando o software
+     * Criando o software.
      */
 
     public TelaEditarCiclo(int index){
@@ -86,8 +84,8 @@ public class TelaEditarCiclo {
     }
 
     /**
-     * inicia e implementa os componentes no conteiner
-     */
+     * Inicia e implementa os componentes no conteiner.
+    */
 
     private void initialize(int index){
         
@@ -188,12 +186,13 @@ public class TelaEditarCiclo {
         txtcpf = new JFormattedTextField(tipocpf);
         cpf.setLabelFor(cpf);
         txtcpf.setBounds(120, 175, 345, 23);
+        txtcpf.setText(ciclo.getCpf());
         frame.getContentPane().add(txtcpf);
 
         // txtnome
         txtnome = new JTextField();
         txtnome.setBounds(120, 145, 345, 23);
-        txtnome.setText(ciclo.getNome()); // Colocar pra todas as váriaveis
+        txtnome.setText(ciclo.getNome());
         frame.getContentPane().add(txtnome);
 
         
@@ -201,30 +200,36 @@ public class TelaEditarCiclo {
         txtdata_nascimento = new JFormattedTextField(tipodata);
         data_nascimento.setLabelFor(data_nascimento);
         txtdata_nascimento.setBounds(140, 205, 170, 23);
+        txtdata_nascimento.setText(ciclo.getData_Nascimento());
         frame.getContentPane().add(txtdata_nascimento);
 
         // txtanticoncepcional
         txttoma_anticoncepcional = new JTextField();
         txttoma_anticoncepcional.setBounds(188, 230, 276, 21);
+        txttoma_anticoncepcional.setText(ciclo.getToma_Anticoncepcional());
         frame.getContentPane().add(txttoma_anticoncepcional);
 
         //txtinicio_menstruacao
         txtinicio_menstruacao = new JFormattedTextField(tipodata);
         inicio_menstruacao.setLabelFor(inicio_menstruacao);
         txtinicio_menstruacao.setBounds(220, 255, 150, 23);
+        txtinicio_menstruacao.setText(ciclo.getInicio_Menstruacao());
         frame.getContentPane().add(txtinicio_menstruacao);
 
         txtfim_menstruacao = new JFormattedTextField(tipodata);
         fim_menstruacao.setLabelFor(fim_menstruacao);
         txtfim_menstruacao.setBounds(212, 285, 160, 23);
+        txtfim_menstruacao.setText(ciclo.getFim_Menstruacao());
         frame.getContentPane().add(txtfim_menstruacao);
 
         txtmedia_ciclo = new JTextField();
         txtmedia_ciclo.setBounds(247, 315, 215, 23);
+        txtmedia_ciclo.setText(ciclo.getDuracao_Ciclo());
         frame.getContentPane().add(txtmedia_ciclo);
 
         txtnumero = new JTextField();
         txtnumero.setBounds(180, 345, 283, 23);
+        txtnumero.setText(ciclo.getNumero());
         frame.getContentPane().add(txtnumero);
 
         

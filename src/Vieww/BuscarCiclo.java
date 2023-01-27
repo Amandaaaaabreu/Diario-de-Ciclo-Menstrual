@@ -25,8 +25,9 @@ import Modelo.Ciclo;
 import Modelo.Dados;
 
 /**
- * Tela que buscar o ciclo quando a usuaria escreve seu nome 
- * @author Amanda Abreu
+ * BuscarCiclo
+ * Busca o ciclo quando a usuaria solicita e escreve seu nome.
+ * @author Amanda 
  * @version 1.0
  * @since 2022
  */
@@ -72,16 +73,16 @@ public static void main(String args[], int index){
 }
 
     /**
-     * Criando o software
-     */
+     * Criando o software.
+    */
 
 public BuscarCiclo(int index){
     initialize(index);
 }
 
-/**
-     * inicia e implementa os componentes no conteiner
-     */
+    /**
+     * Inicia e implementa os componentes no conteiner.
+    */
 
 private void initialize(int index){
         Ciclo ciclo = Dados.getCiclo().get(index);

@@ -24,8 +24,9 @@ import Modelo.Ciclo;
 import Modelo.Dados;
 
 /**
- * Tela de para Cadastrar o ciclo e também a usuaria. 
- * @author AmandaAbreu
+ * CadastroCiclo
+ *  Tela que possibilita a usuaria realizar seu cadastro. 
+ * @author Amanda
  * @since 2022
  * @version 1.0
  */
@@ -71,16 +72,16 @@ public class CadastroCiclo {
     }
 
     /**
-     * Criando o software
-     */
+     * Criando o software.
+    */
 
     public CadastroCiclo() {
         initialize();
     }
 
     /**
-     * inicia e implementa os componentes no conteiner
-     */
+     * Inicia e implementa os componentes no conteiner.
+    */
 
     private void initialize() {
 
@@ -238,8 +239,9 @@ public class CadastroCiclo {
 
        
         /**
-         * Verfica as informacoes que a usuaria colocou no campo de resposta antes de cadastra-la. Caso a usuaria não preencha os campos ou preencha errado, retorna uma mensagem de erro. 
-         */
+         * Verfica as informacoes que a usuaria colocou no campo de resposta antes de cadastra-la.
+         * Caso a usuaria não preencha os campos ou preencha errado, retorna uma mensagem de erro. 
+        */
         fim.setForeground(new java.awt.Color(49, 79, 79));
         fim.setBackground(new Color(216, 196, 216));
         fim.setFont(new java.awt.Font("Luthier", Font.PLAIN, 13));
@@ -285,7 +287,7 @@ public class CadastroCiclo {
 
     }
     /**
-     * Retorna a resposta que o usuário colocou na caixa do JTextField
+     * Retorna a resposta que a usuaria colocou no JTextField.
      */
 
     public static JTextField gettxtnome() {

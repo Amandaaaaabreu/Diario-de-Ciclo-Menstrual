@@ -5,6 +5,7 @@ package Modelo;
  * @author Amanda Abreu
  * @since 2022
  */
+
 public class Ciclo extends Usuaria {
 
     private String inicio_menstruacao;
