@@ -90,6 +90,7 @@ public class TelaEditarCiclo {
      */
 
     private void initialize(int index){
+        
         Ciclo ciclo = Dados.getCiclo().get(index);
         Atendimento atendimento = ciclo.getAtendimento();
         Sintomas sintomas = ciclo.getSintomas();

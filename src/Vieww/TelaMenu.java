@@ -3,17 +3,25 @@ package Vieww;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-
-
+import java.nio.Buffer;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+//import javax.imageio.ImageIO;
+//import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
-import Controle.*;
+//import Modelo.Atendimento;
+//import Controle.*;
 import Modelo.Ciclo;
 //import Vieww.*;
 import Modelo.Dados;
@@ -28,18 +36,19 @@ import Modelo.Dados;
 
 
 public class TelaMenu {
+
+    JPanel tela = new JPanel();
     private JFrame frame;
     JLabel inicial = new JLabel("Diário  de Ciclo Menstrual");
 	JButton ciclo = new JButton("Cadastrar Ciclo");
-	JButton atendimento = new JButton("Atendimento");
-    JButton editar = new JButton("Editar");
+	JButton atendimento = new JButton("Atendimento"); 
     protected JButton one;
    
 
     public static void main(String args[]) {
         new TelaMenu();
-		
-               
+
+        
          }
       
     /**
@@ -73,8 +82,9 @@ public class TelaMenu {
         frame.getContentPane().add(inicial);
 
 
-        
-        
+       
+
+
         ciclo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
                 Object one = e.getSource();
@@ -122,12 +132,12 @@ public class TelaMenu {
         atendimento.setBounds(100,270,250,40);
         frame.getContentPane().add(atendimento);
 
-      
+       
 
-    }
+
 }
         
-
+}
 
 
         
