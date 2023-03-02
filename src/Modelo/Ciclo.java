@@ -21,7 +21,7 @@ public class Ciclo extends Usuaria {
      * @param inicio_menstruacao       primeiro dia da memstruacao
      * @param fim_menstruacao          ultimo dia da menstruacao
      * @param duracao_ciclo            duracao do ciclo
-     * @param numero                    numero do cadastro
+     * @param numero                   numero do cadastro
        
      */
 
